@@ -120,7 +120,7 @@ new serveat();
 	 * Load Google Fonts from CDN.
 	 */
 	function wpdd_google_fonts() {
-		$google_fonts_url = 'https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700&display=swap';
+		$google_fonts_url = 'https://fonts.googleapis.com/css2?family=Mulish:wght@200;300;400;500;600;700;800;900&display=swap';
 		?>
 		
 		<link rel="preconnect"
@@ -141,7 +141,7 @@ new serveat();
 	* style theme
 	*/
 	function serveat_style()  { 
-		wp_enqueue_style( 'app', get_stylesheet_directory_uri() . serveat_get_hash( 'app.css' ) );
+		wp_enqueue_style( 'styles', get_stylesheet_directory_uri() . serveat_get_hash( 'styles.css' ) );
 	}
 	add_action( 'wp_enqueue_scripts', 'serveat_style' );
 

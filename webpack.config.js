@@ -9,7 +9,7 @@ module.exports = (env, argv) => {
   let config = {
     entry: {
       twig: './src/twig.js',
-      style: './src/scss.js',
+      styles: './src/scss.js',
       app: './src/js/app.js',
       // vendors: './src/js/vendors.js',
     },
@@ -86,7 +86,7 @@ module.exports = (env, argv) => {
     },
     plugins: [
       new MiniCssExtractPlugin({
-        filename: 'css/app.[chunkhash].css',
+        filename: 'css/[name].[chunkhash].css',
         chunkFilename: '[id].css',
       }),
       new WatchTimePlugin(),
