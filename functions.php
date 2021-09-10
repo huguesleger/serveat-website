@@ -37,7 +37,7 @@ class serveat extends Timber\Site {
 	 * @param string $context context['this'] Being the Twig's {{ this }}.
 	 */
 	public function add_to_context( $context ) {
-		$context['menu']  = new Timber\Menu();
+		$context['nav']  = new Timber\Menu();
 		$context['site']  = $this;
 		$custom_logo_url = wp_get_attachment_image_url( get_theme_mod( 'custom_logo' ), 'full' );
 		$context['custom_logo_url'] = $custom_logo_url;

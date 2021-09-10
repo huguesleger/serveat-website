@@ -1,0 +1,32 @@
+{% if nav %}
+    <ul class="navbar-nav ml-auto">
+        {% for item in items %}
+            {% if item != loop.last %}
+                <li class="nav-item{% if item.current %} active{% endif %}">
+                    <a class="nav-link" href="{{ item.link }}">
+                        <span class="item-link">{{ item.title }}</span>
+                    </a>
+                </li>
+            {% else %}
+                <a class="btn btn-outline btn-secondary ms-5" href="{{ item.link }}">{{ item.title }}</a>
+            {% endif %}
+        {% endfor %}
+    </ul>
+    <div class="nav-mobile">
+        <div class="wrap-nav">
+            <div class="container">
+                <ul class="list-unstyled text-center mb-0">
+                {% for item in items %}
+                    {% if item != loop.last %}
+                        <li class="nav-item{% if item.current %} active{% endif %}">
+                            <a class="nav-link" href="{{ item.link }}">{{ item.title }}</a>
+                        </li>
+                    {% else %}
+                        <a class="btn btn-secondary" href="{{ item.link }}">{{ item.title }}</a>
+                    {% endif %}
+                {% endfor %}
+                </ul>
+            </div>        
+        </div>
+    </div>
+{% endif %}

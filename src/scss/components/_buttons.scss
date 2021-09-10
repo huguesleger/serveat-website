@@ -1,0 +1,39 @@
+.btn {
+    border-radius: 2rem;
+    transition: .2s ease-in-out;
+    &.btn-primary {
+        background-color: $color_primary;
+        border-color: $color_primary;
+        color: #fff;
+        &:hover {
+            background-color: transparent;
+            color: $color_primary;
+        }
+    }
+    &.btn-secondary {
+        background-color: $color_secondary;
+        border-color: $color_secondary;
+        color: #fff;
+        &:hover {
+            background-color: transparent;
+            color: $color_secondary;
+        }
+    }
+    &.btn-outline {
+        background-color: transparent;
+        &.btn-primary {
+            color: $color_primary;
+            &:hover {
+                background-color: $color_primary;
+                color: #fff;
+            }
+        }
+        &.btn-secondary {
+            color: $color_secondary;
+            &:hover {
+                background-color: $color_secondary;
+                color: #fff;
+            }
+        }
+    }
+}

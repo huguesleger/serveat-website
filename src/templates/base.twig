@@ -5,7 +5,24 @@
 {% endblock %}
 
 <body class="{{body_class}}">
-
+    <header class="header">
+        {% block header %}
+            <nav id="nav" class="navbar navbar-expand-md">
+                <div class="container-fluid px-0">
+                    <a class="navbar-brand" href="{{site.url}}">
+                        <img src="{{custom_logo_url}}" alt="Serveat"/>
+                    </a>
+                    <div class="btn-nav">
+                        <span class="icon-nav"></span>
+                    </div>						
+                {% include "layout/nav.twig" with {'items': nav.get_items} %}	
+                                <div class="wrap-img">
+                      <img class="img-fluid" src="../images/img-1.jpg">
+                </div>							
+                </div>
+            </nav>
+        {% endblock %}
+    </header>
     <div id="app">
 		{% block content %}
         {% endblock %} 

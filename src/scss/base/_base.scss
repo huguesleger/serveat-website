@@ -1,4 +1,9 @@
 body {
     font-family: 'Mulish', sans-serif;
-    background-color: gainsboro;
+    color: $color_primary;
+    background-color: #fff;
+}
+
+#app {
+    margin-top: 60px;
 }
