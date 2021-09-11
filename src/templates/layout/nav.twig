@@ -1,5 +1,5 @@
 {% if nav %}
-    <ul class="navbar-nav ml-auto">
+    <ul class="navbar-nav ms-auto">
         {% for item in items %}
             {% if item != loop.last %}
                 <li class="nav-item{% if item.current %} active{% endif %}">
@@ -7,26 +7,44 @@
                         <span class="item-link">{{ item.title }}</span>
                     </a>
                 </li>
-            {% else %}
-                <a class="btn btn-outline btn-secondary ms-5" href="{{ item.link }}">{{ item.title }}</a>
             {% endif %}
         {% endfor %}
     </ul>
+    {% for item in items %}
+        {% if item == loop.last %}
+            <a class="btn btn-outline btn-secondary btn-demo ms-md-4 ms-lg-5" href="{{ item.link }}">{{ item.title }}</a>            
+        {% endif %}
+    {% endfor %}
+
     <div class="nav-mobile">
         <div class="wrap-nav">
             <div class="container">
-                <ul class="list-unstyled text-center mb-0">
+                <ul class="list-unstyled text-center mb-3">
                 {% for item in items %}
                     {% if item != loop.last %}
                         <li class="nav-item{% if item.current %} active{% endif %}">
                             <a class="nav-link" href="{{ item.link }}">{{ item.title }}</a>
                         </li>
-                    {% else %}
-                        <a class="btn btn-secondary" href="{{ item.link }}">{{ item.title }}</a>
                     {% endif %}
                 {% endfor %}
                 </ul>
-            </div>        
+                {% for item in items %}
+                    {% if item == loop.last %}
+                    <div class="d-flex justify-content-center">
+                        <a class="btn btn-secondary btn-demo-mobile" href="{{ item.link }}">{{ item.title }}</a>
+                    </div>
+                    {% endif %}
+                {% endfor %}
+            </div>
+                <div class="wrap-img mt-5">
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-7">
+                                <img class="img-fluid" src="../../images/illu-waiter.svg">
+                            </div>
+                        </div>
+                    </div>	                    
+                </div>
         </div>
     </div>
 {% endif %}

@@ -12,7 +12,7 @@
         counter-reset: item;
         .nav-item {
             position: relative;
-            margin-right: 2rem;
+            margin-right: 1rem;
             &::before {
                 counter-increment: item;
                 content: "0" counter(item);
@@ -23,15 +23,29 @@
                 line-height: 1;
                 color: $blue_grey;
             }
-            &:nth-last-child(2) {
+            &:last-child {
                 margin-right: 0;
               }
+              &.active {
+                .nav-link {
+                    .item-link {
+                        color: $color_secondary;
+                        &::before {
+                            transform: scale3d(1,1,1) !important;
+                        }
+                    }
+                }
+            }
         }
         .nav-link {
             color: $color_primary;
             font-weight: 700;
+            text-transform: uppercase;
+            font-size: 0.875rem;
             .item-link {
                 position: relative;
+                display: block;
+                padding-top: 0.25rem;
                 &::before {
                     content: '';
                     position: absolute;
@@ -56,6 +70,11 @@
             }
         }
     }
+    .btn-demo, .btn-demo-mobile {
+        text-transform: uppercase;
+        font-size: 0.875rem;
+        font-weight: 700;
+    }
     .navbar-brand {
         z-index: 1;
         svg, img {
@@ -74,20 +93,59 @@
         height: 100vh;
         clip-path: circle(0% at 91.5% 25px);
         transition: all 0.7s cubic-bezier(0.79, 0.01, 0.33, 1);
-        background-color: $peach_middle;
+        background-color: $peach_light;
         &.is-open {
             clip-path: circle(100% at 50% 50%);
-            transition: all 0.7s cubic-bezier(0.79, 0.01, 0.33, 1);
+            transition: clip-path 0.7s cubic-bezier(0.79, 0.01, 0.33, 1);
+            .nav-link {
+                opacity: 1;
+                transform: translateY(0);
+                transition-delay: 0.5s;
+            }
+            .btn-demo-mobile {
+                opacity: 1;
+                transition-delay: 0.6s;
+            }
         }
         .wrap-nav {
             display: flex;
             height: 100%;
             align-items: center;
+            flex-direction: column;
+            justify-content: flex-end;
+        }
+        .nav-item {
+            overflow: hidden;
+            &.active {
+                .nav-link {
+                    color: $color_secondary;
+                }
+            }
         }
         .nav-link {
             color: $color_primary;
             font-size: 2rem;
-            font-weight: 800;
+            font-weight: 700;
+            text-transform: uppercase;
+            line-height: 1;
+            margin-bottom: 0.25rem;
+            opacity: 0;
+            transform: translateY(100%);
+            transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+        }
+        .btn-demo-mobile {
+            opacity: 0;
+            transition: opacity 0.2s ease-in-out;
+        }
+        .wrap-img {
+            background-size: cover;
+            width: 100%;
+            height: auto;
+            background-image: url('../images/bg-city.svg');
+            img {
+                margin-top: 8rem;
+                margin-bottom: 1rem;
+            }
         }
     }
     .btn-nav {
@@ -143,27 +201,50 @@
     }
 }
 
-// .wrap-img {
-//     background-size: cover;
-//     width: 50px;
-//     height: 200px;
-//     background-image: url('../images/illu-waiter.svg');
-// }
-
-@include minwidth(md) {
+@include minwidth(lg) {
     #nav {
         padding-left: 2rem;
         padding-right: 2rem;
+        .navbar-brand {
+            svg, img {
+                width: auto;
+                height: 35px;
+            }
+        }
+        .navbar-nav{
+            .nav-item {
+                margin-right: 1.5rem;
+            }
+        }        
+    }
+}
+
+@include minwidth(md) {
+    #nav {
         .nav-mobile, .btn-nav {
             display: none;
         }
         .navbar-nav {
             display: flex;
         }
-        .navbar-brand {
-            svg, img {
-                width: auto;
-                height: 35px;
+    }
+}
+@include maxwidth(md) {
+    #nav {
+        .btn-demo {
+            display: none;
+        }
+    }
+}
+
+@include maxwidth(xs) {
+    #nav {
+        .nav-mobile {
+            .wrap-nav {
+                justify-content: center;
+            }
+            .wrap-img {
+                display: none;
             }
         }
     }
