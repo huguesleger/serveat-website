@@ -1,0 +1,45 @@
+.wrapper-element {
+    position: absolute;
+    .element-icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 40px;
+        height: 40px;
+        border-radius: 10px;
+        font-size: 1.25rem;
+        &.bg-white {
+            @include box-shadow(0, 0, 10px, -3px);
+        }
+        .serveat-waiter, .serveat-payment, .serveat-card {
+            font-size: 1.5rem;
+        }
+    }
+}
+
+.hero-home {
+    .element-1 {
+        top: 50%;
+        left: 10%;
+    }
+    .element-2 {
+        top: 70%;
+        right: 5%;
+    }
+    .element-3 {
+        top: 60%;
+        left: 15%;
+    }
+    .element-4 {
+        top: 40%;
+        right: 15%;
+    }
+    .element-5 {
+        top: 22%;
+        left: 8%;
+    }
+    .element-6 {
+        top: 78%;
+        right: 10%;
+    }
+}

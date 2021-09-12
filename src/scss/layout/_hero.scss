@@ -1,0 +1,31 @@
+.hero {
+    position: relative;
+    padding: 5.8125rem 0 3.75rem;
+    background-color: #fff;
+    .hero-title {
+        font-size: 3rem;
+        font-weight: 900;
+    }
+    .hero-btn {
+        .btn {
+            width: 184px;
+            &:first-child {
+                margin-right: 1rem;
+            }
+        }
+    }
+}
+
+@include maxwidth(sm) {
+    .hero {
+        .hero-btn {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            .btn:first-child {
+                margin-right: 0;
+                margin-bottom: 1rem;
+            }
+        }
+    }
+}

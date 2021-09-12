@@ -4,6 +4,55 @@ body {
     background-color: #fff;
 }
 
-#app {
-    margin-top: 60px;
+// #app {
+//     padding-top: 60px;
+// }
+
+.img-center {
+    display: block;
+    margin: 0 auto;
+}
+
+.bg-blue-dark {
+    background-color: $color_primary;
+}
+.bg-peach {
+    background-color: $color_secondary;
+} 
+.bg-peach-middle {
+    background-color: $peach_middle;
+}
+.bg-peach-light {
+    background-color: $peach_light;
+}
+.bg-blue-grey {
+    background-color: $blue_grey;
+}
+.bg-grey-light {
+    background-color: $grey_light;
+}
+.bg-white {
+    background-color: #fff;
+}
+
+.c-peach {
+    color: $color_secondary;
+}
+.c-peach-middle {
+    color: $peach_middle;
+}
+.c-peach-light {
+    color: $peach_light;
+}
+.c-blue-dark {
+    color: $color_primary;
+}
+.c-blue-grey {
+    color: $blue_grey;
+}
+.c-grey-light {
+    color: $grey_light;
+}
+.c-white {
+    color: #fff;
 }

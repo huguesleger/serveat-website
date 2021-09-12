@@ -1,4 +1,4 @@
-import {navBtn} from './components/nav';
+import {navBtn, scrollNavbar} from './components/nav';
 import Splitting from 'splitting';
 
 window.App = {};
@@ -8,6 +8,7 @@ export const App = window.App;
 App.init = function() {
     Splitting()
     navBtn(document.querySelector('.btn-nav'));
+    scrollNavbar();
 }
 
 

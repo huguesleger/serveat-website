@@ -177,3 +177,9 @@ xxl: 1400px
     }
   }
 }
+
+/**** end breakpoints ****/
+
+@mixin box-shadow($left: 0px, $bottom: 0px, $blur: 15px, $width: -3px, $color:rgba(0, 0, 0, 0.2)) {
+  box-shadow: $left $bottom $blur $width $color;
+}
