@@ -1,5 +1,9 @@
 @import "~bootstrap/scss/bootstrap";
 
+// Vendor
+// ==================
+@import "vendor/swiper";
+
 // Abstracts
 // ==================
 @import "abstracts/mixin";
@@ -14,8 +18,14 @@
 // ==================
 @import "components/buttons";
 @import "components/elements";
+@import "components/card";
+@import "components/slider-app";
+@import "components/block-txt";
+@import "components/state";
+@import "components/pricing";
 
 // Layout
 // ==================
 @import "layout/nav";
 @import "layout/hero";
+@import "layout/section";

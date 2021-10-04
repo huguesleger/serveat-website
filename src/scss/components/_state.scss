@@ -1,0 +1,22 @@
+.state {
+    width: 30px;
+    height: 10px;
+    border-radius: 50px;
+    border: 1px solid transparent;
+    display: inline-block;
+    margin-right: 1rem;
+    &.state-waiter {
+        // background-color: #15c9a5;
+        background-color: #15c9c0;
+    }
+    &.state-payment {
+        background-color: $color_secondary;
+    }
+    &.state-white {
+        background-color: #fff;
+        border-color: $blue_dark;
+    }
+    &.state-grey {
+        background-color: #646464;
+    }
+}

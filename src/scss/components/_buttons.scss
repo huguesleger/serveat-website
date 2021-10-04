@@ -1,6 +1,15 @@
 .btn {
     // border-radius: 2rem;
     transition: .2s ease-in-out;
+    &.btn-round {
+        border-radius: 2rem;
+    }
+    &.btn-sm {
+        padding: 0.65rem 1.25rem;
+    }
+    &.btn-md {
+        padding: 0.8rem 1.5rem;
+    }
     &.btn-primary {
         background-color: $color_primary;
         border-color: $color_primary;

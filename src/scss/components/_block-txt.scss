@@ -1,0 +1,11 @@
+.block-txt {
+    color: $grey-dark;
+    &.block-center {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    h2 {
+        line-height: 1;
+    }
+}

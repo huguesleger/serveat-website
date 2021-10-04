@@ -1,15 +1,17 @@
 body.on-scroll {
     .header {
         @include box-shadow;
+        background-color: #fff;
     }
 }
 .header {
     position: fixed;
     width: 100%;
     top: 0;
-    background-color: #fff;
-    transition: box-shadow 0.3s ease-in-out;
-    z-index: 1;
+    // background-color: #fff;
+    background-color: transparent;
+    transition: box-shadow 0.3s ease-in-out, background-color 0.3s ease-in-out;
+    z-index: 9999;
 }
 #nav {
     padding: 1rem;
@@ -213,7 +215,7 @@ body.on-scroll {
         .navbar-brand {
             svg, img {
                 width: auto;
-                height: 45px;
+                height: 34px;
             }
         }
         .navbar-nav{

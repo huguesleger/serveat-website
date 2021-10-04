@@ -119,7 +119,7 @@ new serveat();
 	/**
 	 * Load Google Fonts from CDN.
 	 */
-	function wpdd_google_fonts() {
+	function google_fonts() {
 		$google_fonts_url = 'https://fonts.googleapis.com/css2?family=Mulish:wght@200;300;400;500;600;700;800;900&display=swap';
 		?>
 		
@@ -135,12 +135,21 @@ new serveat();
 		href="<?php echo $google_fonts_url; ?>" />	
 	<?php 
 	}
-		add_action( 'wp_head', 'wpdd_google_fonts', 3 );
+		add_action( 'wp_head', 'google_fonts', 3 );
+
+	/*
+	* load font awesome
+	*/	
+	function font_awesome() {
+		wp_enqueue_style('fontawesome', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css');
+	}
+	add_action( 'wp_enqueue_scripts', 'font_awesome');
+
 
 	/*
 	* style theme
 	*/
-	function serveat_style()  { 
+	function serveat_style()  {
 		wp_enqueue_style( 'styles', get_stylesheet_directory_uri() . serveat_get_hash( 'styles.css' ) );
 	}
 	add_action( 'wp_enqueue_scripts', 'serveat_style' );

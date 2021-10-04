@@ -2,11 +2,18 @@ body {
     font-family: 'Mulish', sans-serif;
     color: $color_primary;
     background-color: #fff;
+    overflow-x: hidden;
 }
 
-// #app {
-//     padding-top: 60px;
-// }
+b {
+    font-weight: 800;
+    color: $color_secondary;
+}
+
+#app {
+    position: relative;
+    // padding-top: 87px;
+}
 
 .img-center {
     display: block;
@@ -36,23 +43,41 @@ body {
 }
 
 .c-peach {
-    color: $color_secondary;
+    color: $color_secondary !important;
 }
 .c-peach-middle {
-    color: $peach_middle;
+    color: $peach_middle !important;
 }
 .c-peach-light {
-    color: $peach_light;
+    color: $peach_light !important;
 }
 .c-blue-dark {
-    color: $color_primary;
+    color: $color_primary !important;
 }
 .c-blue-grey {
-    color: $blue_grey;
+    color: $blue_grey !important;
+}
+.c-grey {
+    color: $grey-dark !important;
 }
 .c-grey-light {
-    color: $grey_light;
+    color: $grey_light !important;
 }
 .c-white {
-    color: #fff;
+    color: #fff  !important;
+}
+
+.position-relative {
+    position: relative;
+}
+
+.pl-65 {
+    padding-left: 65px;
+}
+
+.mt-6 {
+    margin-top: 6rem;
+}
+.mt-6-negative {
+    margin-top: -6rem;
 }
