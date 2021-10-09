@@ -40,8 +40,35 @@
         }
     }
     &.card-app {
+        padding: 1.5rem 2.5rem;
+        transition: 0.3s ease-in-out;
+        .card-header h3 {
+            position: relative;
+            font-weight: 800;
+            &::after {
+                content: "";
+                position: absolute;
+                bottom: -10px;
+                height: 3px;
+                left: 0;
+                right: 0;
+                margin: 0 auto;
+                width: 45px;
+                background-color: $color_secondary;
+            }
+        }
+        .card-body {
+            padding-top: 1rem;
+        }
         &.active {
-            background-color: red;
+            background-color: $color_secondary;
+            .card-header h3::after {
+                content: "";
+                background-color: $color_primary;
+            }
+            .card-body p{
+                color: #fff;
+            }
         }
     }
     &.card-process {
@@ -82,4 +109,7 @@
             padding: 1.5rem;
         }
     }
+}
+.wrap-card .card-app:first-child {
+    margin-bottom: 3rem;
 }

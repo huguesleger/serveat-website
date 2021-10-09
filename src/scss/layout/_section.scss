@@ -57,40 +57,8 @@
             background-color: rgba(34, 39, 80, 0.5);
         }
     }
-    &.section-avantages {
-        position: relative;
-        // &::before {
-        //     content: '';
-        //     position: absolute;
-        //     top: 0;
-        //     left: 0;
-        //     width: 100%;
-        //     height: 50%;
-        //     background-color: $color_primary;
-        //     z-index: -1;
-        // }
-    }
-    // &.section-avantages {
-    //     .block-illu {
-    //         position: relative;
-    //         padding: 3rem;
-    //         display: flex;
-    //         justify-content: center;
-    //         align-items: center;
-    //     }
-    //     .shape-circle {
-    //         width: 450px;
-    //         height: 450px;
-    //         border-radius: 50%;
-    //         background-color: #fff;
-    //         position: absolute;
-    //         top: 0;
-    //         left: 0;
-    //     }
-    // }
     &.section-device {
         position: relative;
-        // min-height: 600px;
         .block-device {
             position: absolute;
             top: 3rem;
@@ -100,7 +68,6 @@
             width: 40%;
         }
         .block-img {
-            // width: 100%;
             background-image: url('../images/bg-restaurant-v4.jpg');
             background-size: cover;
             min-height: 650px;
@@ -112,6 +79,14 @@
         background-size: cover;
         min-height: 390px;
         background-position: center;
+    }
+    &.section-app {
+        .wrap-card {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            height: 100%;
+        }
     }
     &.section-pricing {
         position: relative;

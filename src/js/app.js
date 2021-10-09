@@ -2,6 +2,7 @@ import {navBtn, scrollNavbar} from './components/nav';
 import Splitting from 'splitting';
 import {sliderApp} from './components/slider-app';
 import { switchPricing } from './components/switch-pricing';
+import { scrollToTop } from './components/scroll-top';
 
 window.App = {};
 
@@ -13,6 +14,7 @@ App.init = function() {
     scrollNavbar();
     sliderApp();
     switchPricing();
+    scrollToTop();
 }
 
 
