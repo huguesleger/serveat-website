@@ -36,12 +36,19 @@
     background-color: #fff;
     padding: 2rem 1rem;
     border-radius: 0.5rem;
+    height: 100%;
     @include box-shadow;
     .pricing-plan {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
         padding: 1.5rem 1rem;
         text-align: center;
         color: $grey-dark;
+        height: 100%;
         .pricing-title {
+            width: 100%;
             color: $color_primary;
             position: relative;
             font-size: 1rem;
@@ -63,6 +70,7 @@
             margin-bottom: 1rem;
         }
         .pricing-price {
+            width: 100%;
             .price {
                 color: $color_primary;
                 font-weight: 700;
@@ -88,6 +96,23 @@
                     visibility: visible;
                 }
             }
+        }
+        .pricing-custom {
+            line-height: 1;
+        }
+        .item-icon {
+            flex: 1;
+            padding: 1rem;
+            border-right: 1px solid $grey_light;
+            &:last-child {
+                border-right: none $grey_light;
+            }
+            .icon {
+                height: 35px;
+            }
+        }
+        .btn {
+            width: 165px;
         }
     }
 }
