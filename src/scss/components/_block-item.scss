@@ -1,0 +1,12 @@
+.block-item {
+    display: flex;
+    overflow: hidden;
+    .item-txt, .item-img {
+        width: 50%;
+    }
+    .item-img img {
+        object-fit: cover;
+        width: 100%;
+        height: 400px;
+    }
+}

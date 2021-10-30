@@ -1,0 +1,49 @@
+{% extends "base.twig" %}
+
+{% block content %}
+<div class="header-page">
+    <div class="header-content" style="background-image: url('{{ post.thumbnail.src }}')">
+        <div class="header-title">
+            <div class="container">
+                <div class="row">
+                    <h1>{{post.title}}</h1>
+                    <p>Besoin de renseignement, contactez-nous</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="form-contact bg-white">
+        <div class="row g-0">
+            <div class="col-6">
+                <div class="content-info bg-peach">
+                <div class="content-top">
+                    <h2 class="mb-5">Avec Serv'eat, tout va plus vite.</h2>
+                    <p>Vous voulez en savoir plus sur notre solution ?<br>Envoyez-nous un message.</p>
+                </div>
+                    <div class="wrap-img">
+                        <img class="img-fluid" src="../images/illu-contact-email.svg" alt="">
+                    </div>
+                    <div class="info-inner d-flex">
+                        <div class="d-flex align-items-center">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Montpellier, FRANCE</span>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <i class="fas fa-envelope"></i>
+                            <a href="mailto:contact@serveat.fr">contact@serveat.fr</a>
+                        </div>                        
+                    </div>                    
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="content-form">
+                    {{post.content}}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

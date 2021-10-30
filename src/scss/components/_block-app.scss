@@ -1,0 +1,9 @@
+.block-app {
+    position: relative;
+    border-radius: 0.75rem;
+    .app-img {
+        position: absolute;
+        bottom: 0;
+        left: 80px;
+    }
+}

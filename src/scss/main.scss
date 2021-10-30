@@ -23,6 +23,12 @@
 @import "components/block-txt";
 @import "components/state";
 @import "components/pricing";
+@import "components/block-middle";
+@import "components/card-inline";
+@import "components/block-item";
+@import "components/block-app";
+@import "components/block-item";
+@import "components/form";
 
 // Layout
 // ==================
@@ -30,3 +36,9 @@
 @import "layout/hero";
 @import "layout/section";
 @import "layout/footer";
+
+// Pages
+// ==================
+@import "pages/solution";
+@import "pages/contact";
+@import "pages/demo";

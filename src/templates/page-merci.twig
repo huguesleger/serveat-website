@@ -1,0 +1,22 @@
+{% extends "base.twig" %}
+
+{% block content %}
+    <div class="header-page header-thank">
+        <div class="header-content" style="background-image: url('{{ post.thumbnail.src }}')"></div>
+    </div>
+<div class="content-thank">
+    <div class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <i class="far fa-check-circle"></i>
+                    <h2>Message envoyé avec succés</h2>
+                    <p>Merci de nous avoir contacter, nous vous répondrons dans les plus bref délais.<p>
+                    <p>l'équipe Serv'eat</p>
+                    <p><a href="#" class="btn btn-round btn-primary btn-sm">Retour à l'accueil</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,30 @@
+.content-demo {
+    padding-top: 76px;
+    .block-img {
+        position: relative;
+        background-size: cover;
+        min-height: 100vh;
+        background-position: center;
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(34, 39, 80, 0.5);        
+        }
+        .content-block {
+            position: relative;
+            padding: 3rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            color: #fff;
+        }
+    }
+    .content-form {
+        padding: 3rem;
+    }
+}

@@ -1,0 +1,27 @@
+.form-contact {
+    margin-top: -100px;
+    z-index: 1;
+    position: relative;
+    overflow: hidden;
+    border-radius: 0.75rem;
+    margin-bottom: 3rem;
+    @include box-shadow;
+    .content-info, .content-form {
+        padding: 3rem;
+    }
+    .content-info {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+        .info-inner {
+            justify-content: center;
+        }
+        .wrap-img {
+            margin-top: 3.5rem;
+            img {
+                max-height: 350px;
+            }
+        }
+    }
+}
