@@ -41,8 +41,8 @@
     .pricing-plan {
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
-        align-items: flex-start;
+        justify-content: flex-start;
+        align-items: center;
         padding: 1.5rem 1rem;
         text-align: center;
         color: $grey-dark;
@@ -99,6 +99,7 @@
         }
         .pricing-custom {
             line-height: 1;
+            color: $color_primary;
         }
         .item-icon {
             flex: 1;
@@ -113,6 +114,7 @@
         }
         .btn {
             width: 165px;
+            margin-top: auto;
         }
     }
 }
