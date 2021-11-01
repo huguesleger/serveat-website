@@ -2,7 +2,7 @@
     <ul class="navbar-nav ms-auto">
         {% for item in items %}
             {% if item != loop.last %}
-                <li class="nav-item{% if item.current %} active{% endif %}">
+                <li class="nav-item{% if item.current %} active{% endif %}" data-namespace="{{item.slug}}">
                     <a class="nav-link" href="{{ item.link }}">
                         <span class="item-link">{{ item.title }}</span>
                     </a>

@@ -1,7 +1,8 @@
 {% extends "base.twig" %}
 
 {% block content %}
-    <div class="header-page">
+<div class="page-container" data-barba="container" data-barba-namespace="solution">
+    <div class="header-page" data-scroll-section>
         <div class="header-content" style="background-image: url('{{ post.thumbnail.src }}')">
             <div class="header-title">
                 <div class="container">
@@ -14,20 +15,21 @@
         </div>
     </div>
     <div class="content-page">
-        <section class="section solution-list py-8">
+        <section class="section solution-list py-8" data-scroll-section>
             {% include "solution/solution-list.twig" %}
         </section>    
-        <section class="section section-core-feature py-8">
+        <section class="section section-core-feature py-8" data-scroll-section>
             {% include "solution/core-feature.twig" %}
         </section>       
-        <section class="section section-fonctionnement py-8">
+        <section class="section section-fonctionnement py-8" data-scroll-section>
             {% include "solution/fonctionnement.twig" %}
         </section>
-        <section class="section section-materiel py-8">
+        <section class="section section-materiel py-8" data-scroll-section>
             {% include "solution/materiel.twig" %}
         </section> 
-        <section class="section bg-blue-dark py-8">
+        <section class="section bg-blue-dark py-8" data-scroll-section>
             {% include "solution/cta-demo.twig" %}
         </section>
     </div>
+</div>
 {% endblock %}

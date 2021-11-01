@@ -20,17 +20,3 @@ export const navBtn = function(el) {
         // }
     }
 }
-
-export const scrollNavbar = function() {
-    const body = document.querySelector('body');
-    window.addEventListener('scroll', function(){
-        if(window.scrollY > 5) {
-            body.classList.add('on-scroll');
-        } else {
-            body.classList.remove('on-scroll');
-        }
-    });
-    if(window.scrollY > 0) {
-        body.classList.add('on-scroll');
-    }
-}

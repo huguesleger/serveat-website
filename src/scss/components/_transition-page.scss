@@ -1,0 +1,14 @@
+.page-transition-backdrop {
+    pointer-events: none;
+    visibility: hidden;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transform: scaleY(0);
+    clip-path: polygon(0% 100%, 100% 100%, 100% 30%, 0% 0%);
+    z-index: 12000;
+    background-color: $color_secondary;
+}

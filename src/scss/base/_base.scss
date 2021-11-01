@@ -10,6 +10,10 @@ b {
     color: $color_secondary;
 }
 
+.scroll-content {
+    position: relative;
+}
+
 #app {
     position: relative;
     // padding-top: 87px;
@@ -113,4 +117,20 @@ b {
             opacity: 1;
         }
     }
+}
+
+.box-shadow {
+    @include box-shadow;
+}
+.z-index-1 {
+    z-index: 1;
+}
+
+html.has-scroll-smooth {
+    overflow: hidden;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;  
 }

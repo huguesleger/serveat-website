@@ -1,28 +1,30 @@
 {% extends "base.twig" %}
 
 {% block content %}
-<div class="hero hero-home bg-img">
-    {% include "home/hero.twig" %}
+<div class="page-container" data-barba="container" data-barba-namespace="accueil">
+    <div id="hero" class="hero hero-home bg-img" data-scroll-section>
+        {% include "home/hero.twig" %}
+    </div>
+    <section id="avantages" class="section section-avantages bg-grey-light py-8" data-scroll-section>
+        {% include "home/part/avantages.twig" %}
+    </section>
+    <section id="device" class="section section-device" data-scroll-section>
+        {% include "home/part/device.twig" %}
+    </section>
+    <section class="section section-profitability py-8" data-scroll-section>
+        {% include "home/part/rentabilite.twig" %}
+    </section>       
+    <section class="section section-app py-8" data-scroll-section>
+        {% include "home/part/app.twig" %}
+    </section>
+    <section class="section">
+        {% include "home/part/cta.twig" %}
+    </section>
+    <section class="section section-pricing py-8">
+        {% include "home/part/price.twig" %}
+    </section>
+    <section class="section bg-grey-light py-8">
+        {% include "home/part/features.twig" %}
+    </section>
 </div>
-<section class="section section-avantages bg-grey-light py-8">
-    {% include "home/part/avantages.twig" %}
-</section>
-<section class="section section-device">
-    {% include "home/part/device.twig" %}
-</section>
-<section class="section section-profitability bg-peach-light py-8">
-    {% include "home/part/rentabilite.twig" %}
-</section>       
-<section class="section section-app py-8">
-    {% include "home/part/app.twig" %}
-</section>
-<section class="section">
-    {% include "home/part/cta.twig" %}
-</section>
-<section class="section section-pricing py-8">
-    {% include "home/part/price.twig" %}
-</section>
-<section class="section bg-grey-light py-8">
-    {% include "home/part/features.twig" %}
-</section>
 {% endblock %}
