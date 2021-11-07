@@ -1,7 +1,6 @@
 import barba from '@barba/core';
 import barbaPrefetch from '@barba/prefetch';
 import { toSolutionTransition } from './transitions/solution';
-import { toActionTransition } from './transitions/actions';
 import { fromSolutionToHomeTransition } from './transitions/solution-to-home';
 import { highlightCurrentNavLink } from './components/header-nav';
 import { scrollLoc } from './components/scroll';
@@ -32,7 +31,6 @@ export const goToPage = (href) => {
     transitions: [
         toSolutionTransition,
         toContactTransition,
-        toActionTransition,
         fromSolutionToHomeTransition,
         fromContactToHomeTransition,
         toDemoTransition,
