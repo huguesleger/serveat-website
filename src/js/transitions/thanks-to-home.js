@@ -1,12 +1,16 @@
 import { gsap } from "gsap";
+import { sliderApp } from "../components/slider-app";
 
-export const toActionTransition = {
-    name: 'to-action-transition',
+export const fromThanksToHomeTransition = {
+    name: 'from-solution-to-home-transition',
     to: {
-      namespace: ['app-action']
+      namespace: ['accueil']
     },
-    leave() {
-    const pageTransition = document.querySelector('.page-transition-backdrop');
+    from: {
+      namespace: ['thanks']
+    },
+    leave({next}) {
+        const pageTransition = document.querySelector('.page-transition-backdrop');
       return gsap.to(pageTransition, {
         duration: 0.8,
         ease: 'Power4.easeInOut',
@@ -17,12 +21,12 @@ export const toActionTransition = {
       })
       
     },
-    afterLeave({next, current}) { 
+    afterLeave({next, current}) {
+      const scrollBar = document.querySelector('.c-scrollbar');
+      scrollBar.remove();
       return (current.container).remove();
     },
-    beforeEnter() {
-    },
-    enter() {  
+    enter() {
       const $backdrop = document.querySelector('.page-transition-backdrop');
       return gsap.to($backdrop, {
         duration: 0.8,
@@ -33,6 +37,8 @@ export const toActionTransition = {
         onComplete: () => gsap.set($backdrop, {clearProps: 'transform,transformOrigin,visibility,clipPath'})
       })
     },
-    after() {
-    },
+    afterEnter() {
+      sliderApp();
+    }
   };
+  

@@ -1,17 +1,19 @@
 {% extends "base.twig" %}
 
 {% block content %}
-<div class="content-demo">
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-6 block-img" style="background-image: url('{{ post.thumbnail.src }}')">
-                <div class="content-block">
-                    <h1>{{post.title}}</h1>
+<div class="page-container" data-barba="container" data-barba-namespace="demo">
+    <div class="content-demo" data-scroll-section>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-6 block-img" style="background-image: url('{{ post.thumbnail.src }}')">
+                    <div class="content-block">
+                        <h1>{{post.title}}</h1>
+                    </div>
                 </div>
-            </div>
-            <div class="col-6">
-                <div class="content-form">
-                    {{post.content}}
+                <div class="col-6">
+                    <div class="content-form">
+                        {{post.content}}
+                    </div>
                 </div>
             </div>
         </div>

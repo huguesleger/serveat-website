@@ -154,7 +154,7 @@ new serveat();
 	}
 	add_action( 'wp_enqueue_scripts', 'serveat_style' );
 
-
+	
 	/*
 	* scripts theme
 	*/

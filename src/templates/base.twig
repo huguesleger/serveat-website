@@ -11,13 +11,13 @@
             {% endblock %}
         </div>
 
-        <div class="page-transition-backdrop"></div> 
         {% block footer %}
-            <footer class="footer">
+            <footer class="footer" data-scroll-section>
                 {% include 'layout/footer.twig' %}
             </footer>
             {{ function('wp_footer') }}
         {% endblock %} 
+        <div class="page-transition-backdrop"></div> 
     </div>
     <header class="header">
         {% block header %}
