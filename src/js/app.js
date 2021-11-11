@@ -1,5 +1,4 @@
 import {navBtn} from './components/nav';
-import { scrollLoc } from './components/scroll';
 import Splitting from 'splitting';
 import {sliderApp} from './components/slider-app';
 import { scrollToTop } from './components/scroll-top';
@@ -14,7 +13,6 @@ window.App = {};
 export const App = window.App;
 App.init = function() {
     initRouting();
-    scrollLoc();
     Splitting();
     navBtn(document.querySelector('.btn-nav'));
     sliderApp();

@@ -3,13 +3,13 @@ import barbaPrefetch from '@barba/prefetch';
 import { toSolutionTransition } from './transitions/solution';
 import { fromSolutionToHomeTransition } from './transitions/solution-to-home';
 import { highlightCurrentNavLink } from './components/header-nav';
-import { scrollLoc } from './components/scroll';
 import { toContactTransition } from './transitions/contact';
 import { fromContactToHomeTransition } from './transitions/contact-to-home';
 import { toDemoTransition } from './transitions/demo';
 import { fromDemoToHomeTransition } from './transitions/demo-to-home';
 import { toThanksTransition } from './transitions/thanks';
 import { fromThanksToHomeTransition } from './transitions/thanks-to-home';
+import LocomotiveScroll from 'locomotive-scroll';
 
 export const prefetchPage = (href) => barba.prefetch(href);
 export const getCurrentUrl = () => barba.url.getHref();
@@ -48,6 +48,22 @@ export const goToPage = (href) => {
       }
     },
   }); 
+
+  let scrollContainer = new LocomotiveScroll({
+      el: document.querySelector('[data-scroll-container]'),
+      smooth: true,
+  });
+  scrollContainer.on('scroll', (position) => {
+      const body = document.querySelector('body');
+      if((position.scroll.y) > 5) {
+          body.classList.add('on-scroll');
+      } else {
+          body.classList.remove('on-scroll');
+      }
+      if((position.scroll.y) > 0) {
+          body.classList.add('on-scroll');
+      }
+  });
   
   export const initRouting = () => {
     const $html = document.querySelector('html');
@@ -73,7 +89,7 @@ export const goToPage = (href) => {
     });
     barba.hooks.after(() => {
       $html.classList.remove('transition-running');
-      scrollLoc();
+      scrollContainer.update();
     });
     barba.hooks.afterLeave((data) => {
         let regexp = /\<body.*\sclass=["'](.+?)["'].*\>/gi,

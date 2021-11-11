@@ -22,8 +22,6 @@ export const fromThanksToHomeTransition = {
       
     },
     afterLeave({next, current}) {
-      const scrollBar = document.querySelector('.c-scrollbar');
-      scrollBar.remove();
       return (current.container).remove();
     },
     enter() {
