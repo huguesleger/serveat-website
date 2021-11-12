@@ -1,5 +1,4 @@
 import { gsap } from "gsap";
-import { demoForm } from "../components/demo-form";
 
 export const toDemoTransition = {
     name: 'to-demo-transition',
@@ -33,6 +32,5 @@ export const toDemoTransition = {
       })
     },
     afterEnter() {
-      demoForm();
     }
   };

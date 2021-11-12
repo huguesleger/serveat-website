@@ -10,6 +10,8 @@ import { fromDemoToHomeTransition } from './transitions/demo-to-home';
 import { toThanksTransition } from './transitions/thanks';
 import { fromThanksToHomeTransition } from './transitions/thanks-to-home';
 import LocomotiveScroll from 'locomotive-scroll';
+import { ctaDemo } from './components/cta-demo';
+import { demoForm } from './components/demo-form';
 
 export const prefetchPage = (href) => barba.prefetch(href);
 export const getCurrentUrl = () => barba.url.getHref();
@@ -87,9 +89,46 @@ export const goToPage = (href) => {
     barba.hooks.before(() => {
       $html.classList.add('transition-running');
     });
+    barba.hooks.enter(() => {
+      scrollContainer.init();
+      scrollContainer.on('scroll', (position) => {
+        const body = document.querySelector('body');
+        if((position.scroll.y) > 5) {
+            body.classList.add('on-scroll');
+        } else {
+            body.classList.remove('on-scroll');
+        }
+        if((position.scroll.y) > 0) {
+            body.classList.add('on-scroll');
+        }
+    });
+    }),
     barba.hooks.after(() => {
       $html.classList.remove('transition-running');
       scrollContainer.update();
+      const ctaSolution = document.querySelector('.cta-demande-demo');
+      if(ctaSolution) {
+          ctaDemo();
+      }
+      const demo = document.querySelector('.wrap-form-demo');
+      if (demo) {
+          demoForm();
+          function getCookie(name) {
+              const nameEQ = name + "=";
+              const ca = document.cookie.split(";");
+              for (let i = 0; i < ca.length; i++) {
+                const c = ca[i];
+                while (c.charAt(0) == " ") c = c.substring(1, c.length);
+                if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+              }
+              return null;
+            }
+            const inputEmail = document.querySelector('.wrap-form-demo .wrap-email input');
+            inputEmail.value = (getCookie('emailInput'));
+            if(inputEmail.value.length > 0) {
+                document.querySelector('.wrap-form-demo .wrap-email label').classList.add('active');
+            }
+      }
     });
     barba.hooks.afterLeave((data) => {
         let regexp = /\<body.*\sclass=["'](.+?)["'].*\>/gi,
@@ -101,6 +140,7 @@ export const goToPage = (href) => {
         // Set the new body class
         document.body.setAttribute("class", match[1]);
       }
+      scrollContainer.destroy();
     })
     barba.use(barbaPrefetch);
     requestAnimationFrame(() => initBarba());

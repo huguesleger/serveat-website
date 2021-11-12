@@ -2,9 +2,10 @@ export const demoForm = function() {
     const form = document.querySelectorAll('.wrap-form-demo input, .wrap-form-demo textarea, .wrap-form-demo select');
     const phone = document.querySelector('.wrap-form-demo .wrap-phone input');
     const phoneError = document.querySelector('.wrap-form-demo .wrap-phone');
+    const phoneId = phone.getAttribute('id');
     const errorLabel = document.createElement('label');
-    errorLabel.setAttribute('id', 'wpforms-35-field_5-error');
-    errorLabel.setAttribute('for','wpforms-35-field_5');
+    errorLabel.setAttribute('id', phoneId + '-error');
+    errorLabel.setAttribute('for',phoneId );
     errorLabel.classList.add('wpforms-error');
     errorLabel.style.display = "none";
     phoneError.appendChild(errorLabel);
