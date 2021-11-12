@@ -42,7 +42,15 @@
     &.card-app {
         padding: 1.5rem 2.5rem;
         transition: 0.3s ease-in-out;
-        .card-header h3 {
+        .card-header {
+            i {
+                font-size: 1.5rem;
+                color: $color_secondary;
+            }
+            .serveat-card, .serveat-waiter, .serveat-payment {
+                font-size: 2rem;
+            }
+            h3 {
             position: relative;
             font-weight: 800;
             &::after {
@@ -55,6 +63,7 @@
                 margin: 0 auto;
                 width: 45px;
                 background-color: $color_secondary;
+                }
             }
         }
         .card-body {
@@ -62,12 +71,15 @@
         }
         &.active {
             background-color: $color_secondary;
+            .card-header i {
+                color: $color_primary;
+            }
             .card-header h3::after {
                 content: "";
                 background-color: $color_primary;
             }
             .card-body p{
-                color: #fff;
+                color: $color_primary;
             }
         }
     }

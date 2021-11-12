@@ -1,0 +1,20 @@
+.keyword {
+    position: absolute;
+    z-index: 1;
+    line-height: 1;
+    &.keyword-right {
+        top: 0;
+        right: 0;
+    }
+    &.keyword-left {
+        top: 30px;
+        left: 0;
+    }
+    .keyword-txt {
+        color: transparent;
+        -webkit-text-stroke-color: $peach_light;
+        -webkit-text-stroke-width: 1px;
+        font-size: 8rem;
+        font-weight: 700;
+    }
+}
