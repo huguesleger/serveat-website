@@ -6,10 +6,10 @@ export const sliderApp = function() {
         slidesPerView: 1,
         centeredSlides: true,
         loop: true,
-        // autoplay: {
-        //     delay: 3500,
-        //     disableOnInteraction: true,
-        //   },
+        autoplay: {
+            delay: 3500,
+            disableOnInteraction: true,
+          },
         // spaceBetween: 30,
         pagination: {
             el: ".wrapper-content-slider",
