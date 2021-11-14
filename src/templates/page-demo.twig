@@ -2,16 +2,18 @@
 
 {% block content %}
 <div class="page-container" data-barba="container" data-barba-namespace="demo">
-    <div class="content-demo" data-scroll-section>
+    <div class="content-demo pb-5" data-scroll-section>
         <div class="container-fluid">
             <div class="row">
-                <div class="col-6 block-img" style="background-image: url('{{ post.thumbnail.src }}')">
-                    <div class="content-block">
-                        <h1>{{post.title}}</h1>
+                <div class="col-8 block-img" style="background-image: url('{{ post.thumbnail.src }}')">
+                    <div class="content-block" data-scroll data-scroll-speed="3">
+                        <h1 class="title-demo mb-3">Rejoignez Serv'eat</h1>
+                        <h2 class="subtitle-demo mb-0">Commencez par une démo</h2>
+                        <p class="mb-0">Vous êtes interessez, écrivez-nous et nous vous répondrons au plus vite.</p>
                     </div>
                 </div>
-                <div class="col-6">
-                    <div class="content-form">
+                <div class="col-4">
+                    <div class="content-form" data-scroll data-scroll-sticky data-scroll-target="#app">
                         {{post.content}}
                     </div>
                 </div>

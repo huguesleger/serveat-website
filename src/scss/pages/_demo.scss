@@ -16,15 +16,26 @@
         }
         .content-block {
             position: relative;
-            padding: 3rem;
+            padding: 3rem 6rem;
             display: flex;
+            flex-direction: column;
             justify-content: center;
-            align-items: center;
+            align-items: flex-start;
             height: 100%;
             color: #fff;
+            .title-demo {
+                font-size: 3rem;
+                font-weight: 700;
+            }
+            .subtitle-demo {
+                font-size: 1.75rem;
+            }
         }
     }
     .content-form {
         padding: 3rem;
+        .wrap-form-demo {
+            margin-bottom: 0;
+        }
     }
 }
