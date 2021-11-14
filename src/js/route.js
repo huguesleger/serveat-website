@@ -83,7 +83,7 @@ export const goToPage = (href) => {
           scriptEl.src = newScript;
           document.querySelector('body').appendChild(scriptEl); 
 
-          barba.prefetch( protocol + "//" + baseURL + '/merci/');
+          // barba.prefetch( protocol + "//" + baseURL + '/merci/');
         }
     });
     barba.hooks.before(() => {

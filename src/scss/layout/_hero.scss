@@ -101,8 +101,11 @@
         }
     }
     &.header-thank {
-        .header-content::before {
-            display: none;
+        .header-content {
+            min-height: 450px;
+            &::before {
+                display: none;
+            }
         }
     }
 }

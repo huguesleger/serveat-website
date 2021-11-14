@@ -121,6 +121,13 @@ div.wpforms-container-full.wrap-form-contact .wpforms-form .wpforms-field-descri
     padding: 0;
 }
 
+.content-thank {
+    i {
+        color: #78ef9d;
+        font-size: 2rem;
+    }
+}
+
 @include maxwidth(xs) {
     .contact .wrap-infos .title-infos {
         font-size: 2rem;
