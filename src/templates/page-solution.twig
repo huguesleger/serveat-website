@@ -3,8 +3,8 @@
 {% block content %}
 <div class="page-container" data-barba="container" data-barba-namespace="solution">
     <div class="header-page" data-scroll-section>
-        <div class="header-content" style="background-image: url('{{ post.thumbnail.src }}')">
-            <div class="header-title">
+        <div class="header-content" style="background-image: url('{{ post.thumbnail.src }}')" data-scroll data-scroll-sticky data-scroll-repeat data-scroll-target="#app">
+            <div class="header-title" data-scroll data-scroll-speed="2">
                 <div class="container">
                     <div class="row">
                         <h1>{{post.title}}</h1>
@@ -15,16 +15,16 @@
         </div>
     </div>
     <div class="content-page">
-        <section class="section solution-list pt-8 pb-6" data-scroll-section>
+        <section id="list" class="section solution-list pt-8 pb-6" data-scroll-section>
             {% include "solution/solution-list.twig" %}
         </section>    
-        <section class="section section-core-feature py-6" data-scroll-section>
+        <section class="section section-core-feature" data-scroll-section>
             {% include "solution/core-feature.twig" %}
         </section>       
-        <section class="section section-fonctionnement pt-5 pb-6" data-scroll-section>
+        <section class="section section-fonctionnement pb-8" data-scroll-section>
             {% include "solution/fonctionnement.twig" %}
         </section>
-        <section class="section section-client bg-img pt-8" data-scroll-section>
+        <section class="section section-client" data-scroll-section>
             {% include "solution/client.twig" %}
         </section>
         <div class="client-content bg-grey-light pt-6 pb-8" data-scroll-section>
@@ -36,9 +36,6 @@
         <div class="section section-about py-6" data-scroll-section>
             {% include "solution/about.twig" %}
         </div>
-        {# <section class="section section-materiel py-8" data-scroll-section>
-            {% include "solution/materiel.twig" %}
-        </section>  #}
     </div>
 </div>
 {% endblock %}
