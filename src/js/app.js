@@ -5,6 +5,8 @@ import { scrollToTop } from './components/scroll-top';
 import { contactForm } from './components/contact-form';
 import {initRouting} from './route';
 import { loader } from './components/loader';
+import { titlePage } from './components/title-page';
+import { titleDemo } from './components/title-demo';
 
 window.App = {};
 
@@ -15,6 +17,11 @@ App.init = function() {
     const wrapLoader = document.querySelector('.loader');
     if(wrapLoader) {
         loader();
+    }
+    titlePage();
+    const contentDemo = document.querySelector('.content-demo');
+    if(contentDemo) {
+        titleDemo();
     }
     initRouting();
     const nav = document.querySelector('#nav');

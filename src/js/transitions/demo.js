@@ -1,4 +1,6 @@
 import { gsap } from "gsap";
+import splitting from "splitting";
+import { titleDemo } from "../components/title-demo";
 
 export const toDemoTransition = {
     name: 'to-demo-transition',
@@ -21,6 +23,8 @@ export const toDemoTransition = {
       return (current.container).remove();
     },
     enter() {
+      splitting();
+      titleDemo();
       const $backdrop = document.querySelector('.page-transition-backdrop');
       return gsap.to($backdrop, {
         duration: 0.8,

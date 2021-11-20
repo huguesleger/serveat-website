@@ -30,6 +30,13 @@
             .subtitle-demo {
                 font-size: 1.75rem;
             }
+            .inner-title, .inner-subtitle, .inner-txt {
+                overflow: hidden;
+            } 
+            .title-demo .char, .subtitle-demo .char, .txt-demo .char {
+                opacity: 0;
+                transform: translateY(100%);
+            } 
         }
     }
     .content-form {

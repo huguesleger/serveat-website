@@ -1,5 +1,7 @@
 import { gsap } from "gsap";
+import splitting from "splitting";
 import { contactForm } from "../components/contact-form";
+import { titlePage } from "../components/title-page";
 
 export const toContactTransition = {
     name: 'to-contact-transition',
@@ -21,6 +23,8 @@ export const toContactTransition = {
       return (current.container).remove();
     },
     enter() {
+      splitting();
+      titlePage();
       const $backdrop = document.querySelector('.page-transition-backdrop');
       return gsap.to($backdrop, {
         duration: 0.8,

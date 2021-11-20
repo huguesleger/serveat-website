@@ -1,12 +1,14 @@
 import { gsap } from "gsap";
+import splitting from "splitting";
+import { titlePage } from "../components/title-page";
 
 export const toSolutionTransition = {
     name: 'to-solution-transition',
     to: {
       namespace: ['solution']
     },
-    leave({next}) {
-        const pageTransition = document.querySelector('.page-transition-backdrop');
+    leave() {
+      const pageTransition = document.querySelector('.page-transition-backdrop');
       return gsap.to(pageTransition, {
         duration: 0.8,
         ease: 'Power4.easeInOut',
@@ -17,11 +19,13 @@ export const toSolutionTransition = {
       })
       
     },
-    afterLeave({next, current}) {
+    afterLeave({current}) {
       return (current.container).remove();
     },
     enter() {
       const $backdrop = document.querySelector('.page-transition-backdrop');
+      splitting();
+      titlePage();
       return gsap.to($backdrop, {
         duration: 0.8,
         ease: 'Power4.easeInOut',
