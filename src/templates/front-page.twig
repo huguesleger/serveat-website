@@ -1,6 +1,15 @@
 {% extends "base.twig" %}
 
 {% block content %}
+    <div class="loader">
+        <div class="loader-inner">
+            <div class="loader-wrapper wrapper-name">
+                <div class="name">
+                   <img class="logo" src="../images/logo-white.svg" alt="">
+                </div>
+            </div>
+        </div>
+    </div>    
 <div class="page-container" data-barba="container" data-barba-namespace="accueil">
     <div id="hero" class="hero hero-home bg-img" data-scroll-section>
         {% include "home/hero.twig" %}

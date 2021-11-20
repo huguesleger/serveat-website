@@ -5,20 +5,6 @@
 {% endblock %}
 
 <body class="{{body_class}}">
-    <div class="scroll-content" data-scroll-container>
-        <div id="app" data-barba="wrapper">
-            {% block content %}
-            {% endblock %}
-        </div>
-
-        {% block footer %}
-            <footer class="footer" data-scroll-section>
-                {% include 'layout/footer.twig' %}
-            </footer>
-            {{ function('wp_footer') }}
-        {% endblock %} 
-        <div class="page-transition-backdrop"></div> 
-    </div>
     <header class="header">
         {% block header %}
             <nav id="nav" class="navbar navbar-expand-md">
@@ -35,5 +21,19 @@
             </nav>
         {% endblock %}
     </header>
+    <div class="scroll-content" data-scroll-container>
+        <div id="app" data-barba="wrapper">
+            {% block content %}
+            {% endblock %}
+        </div>
+
+        {% block footer %}
+            <footer class="footer" data-scroll-section>
+                {% include 'layout/footer.twig' %}
+            </footer>
+            {{ function('wp_footer') }}
+        {% endblock %} 
+        <div class="page-transition-backdrop"></div> 
+    </div>
 </body>
 </html>

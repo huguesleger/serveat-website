@@ -4,14 +4,16 @@ import {sliderApp} from './components/slider-app';
 import { scrollToTop } from './components/scroll-top';
 import { contactForm } from './components/contact-form';
 import {initRouting} from './route';
+import { loader } from './components/loader';
 
 window.App = {};
 
 
 export const App = window.App;
 App.init = function() {
-    initRouting();
     Splitting();
+    loader();
+    initRouting();
     navBtn(document.querySelector('.btn-nav'));
     sliderApp();
     scrollToTop();

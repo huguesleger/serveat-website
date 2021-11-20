@@ -8,12 +8,31 @@
         font-size: 3rem;
         font-weight: 900;
         line-height: 1;
+        .word {
+            overflow: hidden;
+        }
+        .char {
+            opacity: 0;
+            transform: translateY(100%);
+        }
+    }
+    .hero-baseline {
+        overflow: hidden;
+        p {
+            opacity: 0;
+            transform: translateY(100%);
+        }
     }
     .hero-btn {
-        .btn {
-            width: 184px;
-            &:first-child {
-                margin-right: 1rem;
+        overflow: hidden;
+        .inner-btn {
+            opacity: 0;
+            transform: translateY(100%);
+            .btn {
+                width: 184px;
+                &:first-child {
+                    margin-right: 1rem;
+                }
             }
         }
     }
@@ -21,6 +40,7 @@
         padding-top: 110px;
         img {
             max-height: 400px;
+            opacity: 0;
         }
         .bg-shape {
             clip-path: polygon(0% 120%, 0% 0%, 100% -25%, 55% 100%);
@@ -53,6 +73,7 @@
         background-image: url('../images/bg-restaurant.jpg');
         background-size: cover;
         background-position: center;
+        // opacity: 0;
     }
     // &::before {
     //     content: '';
