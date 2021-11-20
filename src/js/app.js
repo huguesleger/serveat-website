@@ -12,9 +12,15 @@ window.App = {};
 export const App = window.App;
 App.init = function() {
     Splitting();
-    loader();
+    const wrapLoader = document.querySelector('.loader');
+    if(wrapLoader) {
+        loader();
+    }
     initRouting();
-    navBtn(document.querySelector('.btn-nav'));
+    const nav = document.querySelector('#nav');
+    if(nav) {
+        navBtn(document.querySelector('.btn-nav'));
+    }
     sliderApp();
     scrollToTop();
     const contact = document.querySelector('.wrap-form-contact');

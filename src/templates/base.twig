@@ -5,22 +5,22 @@
 {% endblock %}
 
 <body class="{{body_class}}">
-    <header class="header">
-        {% block header %}
-            <nav id="nav" class="navbar navbar-expand-md">
-                <div class="container-fluid px-0">
-                    <a class="navbar-brand" href="{{site.url}}">
-                        <img src="{{custom_logo_url}}" alt="Serveat"/>
-                        {# <img src="../images/logo-inline-white.svg" data-dark="{{custom_logo_url}}" alt="Serveat"/> #}
-                    </a>
-                    <div class="btn-nav">
-                        <span class="icon-nav"></span>
-                    </div>						
-                {% include "layout/nav.twig" with {'items': nav.get_items} %}							
-                </div>
-            </nav>
-        {% endblock %}
-    </header>
+    {% block header %}
+        <header class="header">
+                <nav id="nav" class="navbar navbar-expand-md">
+                    <div class="container-fluid px-0">
+                        <a class="navbar-brand" href="{{site.url}}">
+                            <img src="{{custom_logo_url}}" alt="Serveat"/>
+                            {# <img src="../images/logo-inline-white.svg" data-dark="{{custom_logo_url}}" alt="Serveat"/> #}
+                        </a>
+                        <div class="btn-nav">
+                            <span class="icon-nav"></span>
+                        </div>						
+                    {% include "layout/nav.twig" with {'items': nav.get_items} %}							
+                    </div>
+                </nav>
+        </header>
+    {% endblock %}
     <div class="scroll-content" data-scroll-container>
         <div id="app" data-barba="wrapper">
             {% block content %}

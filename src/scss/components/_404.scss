@@ -1,0 +1,14 @@
+.page-error {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: calc(100vh - 85px);
+    .inner-error {
+        text-align: center;
+        font-size: 8rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        line-height: 1;
+    }
+}

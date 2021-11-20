@@ -18,53 +18,51 @@
     }
 }
 
-.hero-home {
-    .element-1 {
-        top: 50%;
-        left: 10%;
-        .element-icon {
-            animation: scale 5s linear 0s infinite;
-            animation-direction: alternate;
-        }
+.element-1 {
+    top: 50%;
+    left: 10%;
+    .element-icon {
+        animation: scale 5s linear 0s infinite;
+        animation-direction: alternate;
     }
-    .element-2 {
-        top: 70%;
-        right: 5%;
-        .element-icon {
-            animation: slideY 3s linear 0s infinite;
-            animation-direction: alternate;
-        }
+}
+.element-2 {
+    top: 70%;
+    right: 5%;
+    .element-icon {
+        animation: slideY 3s linear 0s infinite;
+        animation-direction: alternate;
     }
-    .element-3 {
-        top: 60%;
-        left: 15%;
-        .element-icon {
-            animation: slideY 4s linear 0s infinite;
-            animation-direction: alternate;
-        }
+}
+.element-3 {
+    top: 60%;
+    left: 15%;
+    .element-icon {
+        animation: slideY 4s linear 0s infinite;
+        animation-direction: alternate;
     }
-    .element-4 {
-        top: 40%;
-        right: 15%;
-        .element-icon {
-            animation: scale 5s linear 0s infinite;
-            animation-direction: alternate;
-        }
+}
+.element-4 {
+    top: 40%;
+    right: 15%;
+    .element-icon {
+        animation: scale 5s linear 0s infinite;
+        animation-direction: alternate;
     }
-    .element-5 {
-        top: 22%;
-        left: 8%;
-        .element-icon {
-            animation: scale 5s linear 0s infinite;
-            animation-direction: alternate;
-        }
+}
+.element-5 {
+    top: 22%;
+    left: 8%;
+    .element-icon {
+        animation: scale 5s linear 0s infinite;
+        animation-direction: alternate;
     }
-    .element-6 {
-        top: 78%;
-        right: 10%;
-        .element-icon {
-            animation: rotate 8s linear 0s infinite;
-        }
+}
+.element-6 {
+    top: 78%;
+    right: 10%;
+    .element-icon {
+        animation: rotate 8s linear 0s infinite;
     }
 }
 
