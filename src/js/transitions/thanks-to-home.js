@@ -1,5 +1,4 @@
 import { gsap } from "gsap";
-import { sliderApp } from "../components/slider-app";
 
 export const fromThanksToHomeTransition = {
     name: 'from-solution-to-home-transition',
@@ -36,7 +35,6 @@ export const fromThanksToHomeTransition = {
       })
     },
     afterEnter() {
-      sliderApp();
     }
   };
   

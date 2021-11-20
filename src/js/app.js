@@ -21,7 +21,10 @@ App.init = function() {
     if(nav) {
         navBtn(document.querySelector('.btn-nav'));
     }
-    sliderApp();
+    const slider = document.querySelector('.slider-device');
+    if (slider) {
+      sliderApp()
+    }
     scrollToTop();
     const contact = document.querySelector('.wrap-form-contact');
     if(contact) {

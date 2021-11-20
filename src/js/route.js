@@ -12,6 +12,9 @@ import { fromThanksToHomeTransition } from './transitions/thanks-to-home';
 import LocomotiveScroll from 'locomotive-scroll';
 import { ctaDemo } from './components/cta-demo';
 import { demoForm } from './components/demo-form';
+import { hero } from './components/hero';
+import Splitting from 'splitting';
+import { sliderApp } from './components/slider-app';
 
 export const prefetchPage = (href) => barba.prefetch(href);
 export const getCurrentUrl = () => barba.url.getHref();
@@ -102,6 +105,15 @@ export const goToPage = (href) => {
             body.classList.add('on-scroll');
         }
     });
+    const heroHome = document.querySelector('.hero-home');
+    if(heroHome) {
+      Splitting();
+      hero();
+    }
+    const slider = document.querySelector('.slider-device');
+    if (slider) {
+      sliderApp()
+    }
     }),
     barba.hooks.after(() => {
       $html.classList.remove('transition-running');
