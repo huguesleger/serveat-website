@@ -133,3 +133,16 @@ div.wpforms-container-full.wrap-form-contact .wpforms-form .wpforms-field-descri
         font-size: 2rem;
     }
 }
+
+@include maxwidth(md) {
+    .wrap-form-demo {
+        .wpforms-form {
+            .wrap-select {
+                min-height: 75px;
+                select {
+                    margin-top: 20px;
+                }
+            }
+        }
+    }
+}

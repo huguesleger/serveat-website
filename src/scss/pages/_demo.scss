@@ -53,3 +53,34 @@
         }
     }
 }
+
+@include maxwidth(xl) {
+    .content-demo {
+        .block-img {
+            min-height: 350px;
+            .content-block {
+                padding: 2rem;
+            }
+        }
+    } 
+}
+
+@include maxwidth(md) {
+    .content-demo {
+        .block-img {
+            min-height: 350px;
+        }
+        .content-form {
+            padding: 1.5rem;
+            .subtitle-demo {
+                font-size: 1.25rem;
+            }
+        }
+    }
+}
+
+@include minmaxwidth(md, xl) {
+    .content-demo .block-img .content-block {
+        align-items: center;
+    }
+}
