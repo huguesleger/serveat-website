@@ -25,3 +25,15 @@
         }
     }
 }
+
+@include minmaxwidth(md, lg) {
+    .content-thank {
+        height: calc(100vh - 250px - 90px - 76px);
+    }
+}
+
+@include minmaxwidth(lg, xl) {
+    .content-thank {
+        height: calc(100vh - 450px - 90px - 76px);
+    }
+}
