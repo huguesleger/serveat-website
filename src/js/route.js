@@ -105,6 +105,10 @@ export const goToPage = (href) => {
             body.classList.add('on-scroll');
         }
     });
+    const navMobile = document.querySelector('.nav-mobile');
+    navMobile.classList.remove('is-open');
+    const btnMobile = document.querySelector('.btn-nav');
+    btnMobile.classList.remove('is-open');
     const heroHome = document.querySelector('.hero-home');
     if(heroHome) {
       Splitting();

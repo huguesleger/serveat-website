@@ -22,7 +22,7 @@
                 <ul class="list-unstyled text-center mb-3">
                 {% for item in items %}
                     {% if item != loop.last %}
-                        <li class="nav-item{% if item.current %} active{% endif %}">
+                        <li class="nav-item{% if item.current %} active{% endif %}" data-namespace="{{item.slug}}">
                             <a class="nav-link" href="{{ item.link }}">{{ item.title }}</a>
                         </li>
                     {% endif %}

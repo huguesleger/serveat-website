@@ -1,5 +1,5 @@
 export const highlightCurrentNavLink = pageNamescape => {
-    const $navLinks = document.querySelectorAll('.navbar-nav .nav-item');
+    const $navLinks = document.querySelectorAll('#nav .nav-item');
 
     $navLinks.forEach(el => {
         const active = el.dataset.namespace === pageNamescape.dataset.barbaNamespace;
