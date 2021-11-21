@@ -12,3 +12,28 @@
         line-height: 1;
     }
 }
+
+@include maxwidth(md) {
+    .page-error {
+        .inner-error {
+            font-size: 3rem;
+            text-align: left;
+            padding: 0 1rem;
+        }
+        .wrapper-element {
+            display: none;
+        }
+    }
+}
+
+@include maxwidth(xs) {
+    .page-error .inner-error {
+        font-size: 2.5rem;
+    }
+}
+
+@include minmaxwidth(md, lg) {
+    .page-error .inner-error {
+        font-size: 4rem;
+    }
+}
