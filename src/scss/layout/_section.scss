@@ -94,7 +94,7 @@
                 background-size: cover;
                 background-position-x: center;
                 background-position-y: -200px;
-                height: 100vh;
+                height: 100%;
             }
         }
     }
@@ -225,6 +225,50 @@
                 .inner-content {
                     height: 100%;
                 }
+            }
+        }
+    }
+}
+
+@include maxwidth(lg) {
+    .section {
+        .img-cta {
+            height: 350px;
+            .inner-img .bg-img {
+                background-position-y: 0;
+            }
+        }
+    }
+}
+
+@include maxwidth(lg) {
+    .section {
+        &.section-device {
+            .block-img {
+                min-height: 350px;
+                .inner-img .bg-img {
+                    background-position: center;
+                }
+            }
+        }
+    }
+}
+
+@include minmaxwidth(md, lg) {
+    .section.section-app .wrap-card {
+        justify-content: flex-start;
+    }
+    .section-profitability img {
+        max-width: 65%;
+        margin: 0 auto;
+    }
+}
+
+@include minmaxwidth(lg, xl) {
+    .section {
+        .img-cta {
+            .inner-img .bg-img {
+                background-position-y: 0;
             }
         }
     }

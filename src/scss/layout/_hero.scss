@@ -157,5 +157,30 @@
                 margin-bottom: 1rem;
             }
         }
+        .hero-title {
+            font-size: 2.5rem;
+        }
+    }
+}
+@include maxwidth(md) {
+    .hero {
+        .wrapper-element {
+            display: none;
+        }
+        .hero-btn .inner-btn .btn:first-child {
+            margin-right: 0;
+        }
+    }
+}
+@include maxwidth(lg) {
+    .hero {
+        .hero-bg-img, .bg-shape {
+            display: none;
+        }
+    }
+}
+@include minmaxwidth(md, xl) {
+    .hero {
+        min-height: 750px;
     }
 }

@@ -163,3 +163,28 @@ html.has-scroll-smooth {
     top: 0;
     bottom: 0;  
 }
+
+@include maxwidth(md) {
+    #scroll-to-top {
+        display: none;
+    }
+}
+
+@include minwidth(xl) {
+    .pt-xl-8 {
+        padding-top: 8rem !important;
+    }
+}
+
+@include minwidth(lg) {
+    .py-lg-6 {
+        padding-top: 6rem !important;
+        padding-bottom: 6rem !important;
+    }
+    .mt-lg-6 {
+        margin-top: 6rem;
+    }
+    .mt-lg-6-negative {
+        margin-top: -6rem;
+    }
+}

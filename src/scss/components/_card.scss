@@ -85,10 +85,11 @@
     }
     &.card-process {
         padding: 0;
-        margin-bottom: 3rem;
+        // margin-bottom: 3rem;
+        // height: 100%;
         .card-header {
             position: relative;
-            max-height: 270px;
+            max-height: 240px;
             overflow: hidden;
             border-top-left-radius: 1rem;
             border-top-right-radius: 1rem;
@@ -136,4 +137,36 @@
 }
 .wrap-card .card-app:first-child {
     margin-bottom: 3rem;
+}
+
+@include minmaxwidth(md, lg) {
+    .card.card-app {
+        padding: 1.5rem;
+        min-height: 275px;
+        .card-header h3 {
+            font-size: 1.15rem;
+        }
+    }
+}
+
+@include minmaxwidth(lg, xl) {
+    .card.card-app {
+        .card-header h3 {
+            font-size: 1.5rem;
+        }
+    }
+    .card.card-process {
+        .card-header {
+            max-height: 170px;
+        }
+    }
+}
+
+@include maxwidth(lg) {
+    .card.card-process {
+        height: 100%;
+        .card-header {
+            max-height: 220px;
+        }
+    }
 }

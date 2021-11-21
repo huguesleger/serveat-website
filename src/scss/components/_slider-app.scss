@@ -3,6 +3,7 @@
     padding: 16px 20px 30px 20px;
     background-size: 100%;
     max-width: 280px;
+    width: 100%;
     margin: 0 auto;
     margin-top: 0;
     background-image: url('../images/mobile-slider-white.png');
@@ -28,5 +29,21 @@
         img {
             border-radius: 32px;
         }
+    }
+}
+
+@include minmaxwidth(md, lg) {
+    .slider-device {
+        padding: 16px 20px 45px 20px;
+        background-size: 97%;
+        &::before {
+            content: "";
+            width: 100px;
+        }
+    }
+    .wrap-slider {
+        height: 100%;
+        display: flex;
+        align-items: center;
     }
 }

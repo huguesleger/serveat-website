@@ -18,3 +18,9 @@
         font-weight: 700;
     }
 }
+
+@include maxwidth(xl) {
+    .wrap-keyword {
+        display: none;
+    }
+}
