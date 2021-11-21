@@ -164,7 +164,7 @@ html.has-scroll-smooth {
     bottom: 0;  
 }
 
-@include maxwidth(md) {
+@include maxwidth(xl) {
     #scroll-to-top {
         display: none;
     }
@@ -173,6 +173,9 @@ html.has-scroll-smooth {
 @include minwidth(xl) {
     .pt-xl-8 {
         padding-top: 8rem !important;
+    }
+    .pb-xl-8 {
+        padding-bottom: 8rem!important;
     }
 }
 

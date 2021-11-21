@@ -230,13 +230,20 @@
     }
 }
 
-@include maxwidth(lg) {
+@include maxwidth(md) {
     .section {
-        .img-cta {
-            height: 350px;
-            .inner-img .bg-img {
-                background-position-y: 0;
+        &.section-about {
+            .wrap-about {
+                height: auto;
             }
+            .inner-img {
+                .img-cover {
+                    height: auto;
+                }
+            }
+        }
+        &.section-client .wrap-bg-img .bg-img {
+            height: 350px;
         }
     }
 }
@@ -251,8 +258,15 @@
                 }
             }
         }
+        .img-cta {
+            height: 350px;
+            .inner-img .bg-img {
+                background-position-y: 0;
+            }
+        }
     }
 }
+
 
 @include minmaxwidth(md, lg) {
     .section.section-app .wrap-card {

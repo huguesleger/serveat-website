@@ -170,3 +170,9 @@
         }
     }
 }
+
+@include maxwidth(xl) {
+    .card.card-number {
+        margin-bottom: 3rem;
+    }
+}
