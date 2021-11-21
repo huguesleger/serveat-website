@@ -2,17 +2,24 @@
     padding-top: 76px;
     .block-img {
         position: relative;
-        background-size: cover;
         min-height: 100vh;
-        background-position: center;
-        &::before {
-            content: '';
+        overflow: hidden;
+        .inner-img {
             position: absolute;
-            top: 0;
             left: 0;
-            right: 0;
-            bottom: 0;
-            background-color: rgba(34, 39, 80, 0.5);        
+            background-size: cover;
+            height: 100%;
+            width: 100%;
+            background-position: center;
+            &::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background-color: rgba(34, 39, 80, 0.5);        
+            }
         }
         .content-block {
             position: relative;

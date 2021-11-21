@@ -14,16 +14,20 @@ window.App = {};
 export const App = window.App;
 App.init = function() {
     Splitting();
+    initRouting();
+    scrollToTop();
     const wrapLoader = document.querySelector('.loader');
     if(wrapLoader) {
         loader();
     }
-    titlePage();
+    const headerTitlePage = document.querySelector('.header-page');   
+    if(headerTitlePage) {
+        titlePage();
+    }
     const contentDemo = document.querySelector('.content-demo');
     if(contentDemo) {
         titleDemo();
     }
-    initRouting();
     const nav = document.querySelector('#nav');
     if(nav) {
         navBtn(document.querySelector('.btn-nav'));
@@ -32,7 +36,6 @@ App.init = function() {
     if (slider) {
       sliderApp()
     }
-    scrollToTop();
     const contact = document.querySelector('.wrap-form-contact');
     if(contact) {
         contactForm();
