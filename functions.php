@@ -25,13 +25,16 @@ class serveat extends Timber\Site {
 		/** This is where you can register custom post types. */
 		public function register_post_types() {
 
+			require get_template_directory() . '/homepost/custom-post-home.php';
+			require get_template_directory() . '/solutionpost/custom-post-solution.php';
+
 		}
 
         /** This is where you can register custom taxonomies. */
         public function register_taxonomies() {
 
         }
-
+		
 	/** This is where you add some context
 	 *
 	 * @param string $context context['this'] Being the Twig's {{ this }}.
@@ -188,3 +191,56 @@ new serveat();
 	 * clean wordpress
 	 */
 	// require get_template_directory() . '/cleaner.php';
+
+	/**
+	 * Removes some menus by page.
+	 */
+	function wpdocs_remove_menus() {
+		remove_menu_page( 'edit.php' );                  
+		remove_menu_page( 'edit-comments.php' );       
+	}
+	add_action( 'admin_menu', 'wpdocs_remove_menus' ); 
+
+	
+
+	/**
+	 * add menu homePage
+	 */	
+	function menu_homePage(){
+			add_menu_page(
+				'Post Types',    
+				'Home Page',          
+				'edit_posts',           
+				// 'javascript:void(0);',  
+				'homepost/custom-post-home.php',
+				'',                   
+				'dashicons-food', 
+				4
+			);
+	} 
+	add_action( 'admin_menu', 'menu_homePage' );
+
+	/**
+	 * add menu solutionPage
+	 */	
+	function menu_solutionPage(){
+		add_menu_page(
+			'Post Types',    
+			'Solution Page',          
+			'edit_posts',           
+			// 'javascript:void(0);',  
+			'solutionpost/custom-post-solution.php',
+			'',                   
+			'dashicons-food', 
+			4
+		);
+		// add_submenu_page(
+		// 	'javascript:void(0);',
+		// 	// 'solutionpost/custom-post-solution.php',
+		// 	'Liste Serveat',
+		// 	'Liste Serveat',
+		// 	'edit_posts',
+		// 	"edit.php?post_type=list-serveat"
+		// );				
+} 
+add_action( 'admin_menu', 'menu_solutionPage' );	
