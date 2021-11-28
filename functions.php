@@ -106,6 +106,31 @@ class serveat extends Timber\Site {
 		add_theme_support('custom-logo',array(
 			'flex-height' => true,
 		));
+
+		/** 
+		 *  add class body
+		*/
+		add_filter( 'body_class', function( $classes ) {
+			if ( is_page_template( 'page-merci.php' ) ) {
+				$classes[] = 'page-thanks';
+			} elseif ( is_page_template( 'page-solution.php' ) ) {
+				$classes[] = 'page-solution';
+			} elseif ( is_page_template( 'page-contact.php' ) ) {
+				$classes[] = 'page-contact';
+			} elseif ( is_page_template( 'page-demo.php' ) ) {
+				$classes[] = 'page-demo';				
+			} elseif ( is_front_page() ){
+				$classes[] = 'page-home';	
+			}	
+		  return array_merge( $classes);
+		});
+
+
+		if ( is_page_template( 'page-merci.php' ) ) {
+			// about.php is used
+		} else {
+			// about.php is not used
+		}		
 	}
 
 	/** This is where you can add your own functions to twig.
