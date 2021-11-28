@@ -43,6 +43,9 @@ $context['post_card_atout'] = $timber_post_card_atout;
 $timber_post_header         = new Timber\Post();
 $context['post_header'] = $timber_post_header;
 
+$timber_post_pack         = new Timber\Post();
+$context['post_pack'] = $timber_post_pack;
+
 $timber_post_serveat         = new Timber\Post();
 $context['post_serveat'] = $timber_post_serveat;
 

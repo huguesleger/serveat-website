@@ -7,19 +7,21 @@
             </div>
         </div>
     </div>
+    {% if post_serveat.meta('affichage_list_serveat') == true %}
     <div class="row pt-5">
-    {% for post_list_serveat in posts_list_serveat %}
-        <div class="col-md-6 col-lg-3">
-            <div class="item-list h-100" data-scroll data-scroll-speed="2">
-                <div class="item-icon">
-                    <i class="{{post_list_serveat.icon_list_serveat}} c-peach"></i>
-                </div>
-                <div class="item-list-content">
-                    <h3>{{post_list_serveat.title}}</h3>
-                    <p>{{post_list_serveat.meta('txt_list_serveat')}}</p>
-                </div>
-            </div>                              
+        {% for post_list_serveat in posts_list_serveat %}
+            <div class="col-md-6 col-lg-3">
+                <div class="item-list h-100" data-scroll data-scroll-speed="2">
+                    <div class="item-icon">
+                        <i class="{{post_list_serveat.icon_list_serveat}} c-peach"></i>
+                    </div>
+                    <div class="item-list-content">
+                        <h3>{{post_list_serveat.title}}</h3>
+                        <p>{{post_list_serveat.meta('txt_list_serveat')}}</p>
+                    </div>
+                </div>                              
+            </div>
+        {% endfor %}
         </div>
-    {% endfor %}                                 
-    </div>
+    {% endif %}                                 
 </div>
