@@ -15,7 +15,7 @@
             <div class="row">
             {% for i, post_card_client in posts_card_client %}
             {% set i = i + 1 %}
-                <div class="col-md-6 mt-lg-6 mb-5" data-scroll>
+                <div class="col-md-6 mb-5 {% if loop.first %} mt-lg-6{% elseif loop.last %} mt-lg-6-negative{% endif %}" data-scroll>
                     <div class="card card-process" data-scroll data-scroll-speed="1">
                         <div class="card-header">
                             <div class="process-number"><span>0{{i}}</span></div>
@@ -27,39 +27,6 @@
                     </div>
                 </div>
              {% endfor %}   
-                {# <div class="col-md-6 mb-5" data-scroll>
-                    <div class="card card-process" data-scroll data-scroll-speed="1">
-                        <div class="card-header">
-                        <div class="process-number"><span>02</span></div>
-                            <img class="img-fluid" src="../../../images/img-process-1.jpg" alt="">
-                        </div>
-                        <div class="card-body">
-                            <p>Une application pensée pour les utilisateurs, avec une prise en main intuitive.</p>
-                        </div>
-                    </div>
-                </div> #}
-                {# <div class="col-md-6 mb-5" data-scroll>
-                    <div class="card card-process" data-scroll data-scroll-speed="1">
-                        <div class="card-header">
-                        <div class="process-number"><span>03</span></div>
-                            <img class="img-fluid" src="../../../images/serveur.jpg" alt="">
-                        </div>
-                        <div class="card-body">
-                            <p>Offrez un service efficace, et gagnez du temps sur vos déplacements.</p>
-                        </div>
-                    </div>
-                </div> #}
-                {# <div class="col-md-6 mt-lg-6-negative mb-5" data-scroll>
-                    <div class="card card-process" ddata-scroll data-scroll-speed="1">
-                        <div class="card-header">
-                            <div class="process-number"><span>04</span></div>
-                            <img class="img-fluid" src="../../../images/dinner-restaurant.jpg" alt=""> 
-                        </div>
-                        <div class="card-body">
-                            <p>Un rapport client / serveur plus convivial, intérvenez quand le client le souhaite et satisfaisez vos clients.</p>
-                        </div>
-                    </div>
-                </div>                                                 #}
             </div>
         </div>
     </div>
