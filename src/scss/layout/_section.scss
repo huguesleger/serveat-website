@@ -1,289 +1,294 @@
 .section {
-    .section-title {
-        font-weight: 800;
-        line-height: 1;
-        &.line-bottom {
-            position: relative;
-            &::after {
-                content: "";
-                position: absolute;
-                bottom: -10px;
-                height: 3px;
-                left: 0;
-                right: 0;
-                margin: 0 auto;
-                width: 45px;
-                background-color: $color_secondary;
-            }
-        }
-        &.line-left {
-            position: relative;
-            padding-left: 65px;
-            &::before {
-                content: "";
-                position: absolute;
-                height: 3px;
-                left: 0;
-                top: 1rem;
-                width: 45px;
-                background-color: $color_secondary;
-            }
-        }
+  .section-title {
+    font-weight: 800;
+    line-height: 1;
+    &.line-bottom {
+      position: relative;
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: -10px;
+        height: 3px;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        width: 45px;
+        background-color: $color_secondary;
+      }
     }
-    .section-icon {
-        font-size: 1.5rem;
-        line-height: 1;
+    &.line-left {
+      position: relative;
+      padding-left: 65px;
+      &::before {
+        content: "";
+        position: absolute;
+        height: 3px;
+        left: 0;
+        top: 1rem;
+        width: 45px;
+        background-color: $color_secondary;
+      }
     }
-    &.section-bg {
-        width: 100%;
+  }
+  .section-icon {
+    font-size: 1.5rem;
+    line-height: 1;
+  }
+  &.section-bg {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+  }
+  &.bg-avantages {
+    background-image: url("../images/bg-restaurant.jpg");
+  }
+  &.bg-opaque {
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(34, 39, 80, 0.5);
+    }
+  }
+  &.section-device {
+    position: relative;
+    .block-device {
+      position: absolute;
+      top: 3rem;
+      right: -150px;
+    }
+    .block-text {
+      width: 40%;
+    }
+    .block-img {
+      min-height: 650px;
+      .inner-img {
+        position: relative;
         height: 100%;
+        overflow: hidden;
+        // .bg-img {
+        //   background-size: cover;
+        //   background-position: right;
+        //   background-image: url("../images/bg-restaurant-v4.jpg");
+        //   height: 100%;
+        // }
+      }
+    }
+  }
+  .img-cta {
+    height: 550px;
+    overflow: hidden;
+    .inner-img {
+      position: relative;
+      height: 100%;
+      overflow: hidden;
+      // .bg-img {
+      //   background-image: url("../images/bg-restaurant.jpg");
+      //   background-size: cover;
+      //   // background-position-x: center;
+      //   // background-position-y: -200px;
+      //   background-position: center;
+      //   height: 100%;
+      // }
+    }
+  }
+  &.section-profitability {
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 250px;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-image: url("../images/bg-city.svg");
+      background-size: contain;
+      background-position: center;
+      opacity: 0.4;
+    }
+    .block-txt {
+      p {
+        color: $grey-dark;
+      }
+    }
+  }
+  &.section-app {
+    .wrap-card {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: 100%;
+    }
+  }
+  &.section-pricing {
+    position: relative;
+    min-height: 550px;
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      width: 100%;
+      height: 400px;
+      background-color: $peach_light;
+      z-index: -1;
+    }
+  }
+  // &.section-materiel {
+  //     height: 400px;
+  // }
+  &.section-application {
+    padding-top: 220px;
+    padding-bottom: 120px;
+  }
+  &.section-listing {
+    position: relative;
+  }
+  &.section-fonctionnement {
+    position: relative;
+    z-index: -1;
+    .wrap-pattern {
+      width: 100%;
+      bottom: 0;
+      height: 388px;
+      position: absolute;
+      overflow: hidden;
+      .bg-pattern {
+        position: relative;
+        width: 100%;
+        background-image: url("../images/pattern-food.svg");
+        background-repeat: repeat;
+        background-size: 150px;
+        height: 100%;
+        opacity: 0.2;
+      }
+    }
+  }
+  &.section-client {
+    overflow: hidden;
+    .wrap-bg-img {
+      overflow: hidden;
+      position: relative;
+      &::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        background-color: $grey_light;
+        width: 100%;
+        height: 50px;
+      }
+      .bg-img {
+        position: relative;
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 550px;
+        background-image: url("../images/dinner-restaurant.jpg");
         background-size: cover;
         background-position: center;
-    }
-    &.bg-avantages {
-        background-image: url('../images/bg-restaurant.jpg');
-    }
-    &.bg-opaque {
-        position: relative;
         &::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(34, 39, 80, 0.5);
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          width: 100%;
+          height: 100%;
+          background-color: rgba(34, 39, 80, 0.5);
         }
+      }
     }
-    &.section-device {
-        position: relative;
-        .block-device {
-            position: absolute;
-            top: 3rem;
-            right: -150px;
-        }
-        .block-text {
-            width: 40%;
-        }
-        .block-img {
-            min-height: 650px;
-            .inner-img {
-                position: relative;
-                height: 100%;
-                overflow: hidden;
-                .bg-img {
-                    background-size: cover;
-                    background-position: right;
-                    background-image: url('../images/bg-restaurant-v4.jpg');
-                    height: 100%;
-                }
-            }
-        }
-    }
-    .img-cta {
-        height: 550px;
+  }
+  &.section-about {
+    .wrap-about {
+      height: 420px;
+      .img-about {
         overflow: hidden;
-        .inner-img {
-            position: relative;
+        height: 100%;
+        .wrap-img {
+          // overflow: hidden;
+          height: 100%;
+          .inner-img {
+            // overflow: hidden;
             height: 100%;
-            overflow: hidden;
-            .bg-img {
-                background-image: url('../images/bg-restaurant.jpg');
-                background-size: cover;
-                background-position-x: center;
-                background-position-y: -200px;
-                height: 100%;
-            }
+          }
         }
-    }
-    &.section-profitability {
-        position: relative;
-        &::before {
-            content: "";
-            position: absolute;
-            width: 100%;
-            height: 250px;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background-image: url('../images/bg-city.svg');
-            background-size: contain;
-            background-position: center;
-            opacity: 0.4;
-        }
-    }
-    &.section-app {
-        .wrap-card {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            height: 100%;
-        }
-    }
-    &.section-pricing {
-        position: relative;
-        min-height: 550px;
-        &::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            width: 100%;
-            height: 400px;
-            background-color: $peach_light;
-            z-index: -1;
-        }
-    }
-    // &.section-materiel {
-    //     height: 400px;
-    // }
-    &.section-application {
-        padding-top: 220px;
-        padding-bottom: 120px;
-    }
-    &.section-listing {
-        position: relative;
-    }
-    &.section-fonctionnement {
-        position: relative;
-        z-index: -1;
-        .wrap-pattern {
-            width: 100%;
-            bottom: 0;
-            height: 388px;
-            position: absolute;
-            overflow: hidden;
-            .bg-pattern {
-                position: relative;
-                width: 100%;
-                background-image: url('../images/pattern-food.svg');
-                background-repeat: repeat;
-                background-size: 150px;
-                height: 100%;
-                opacity: 0.2;
-            }
-        }
-    }
-    &.section-client {
+      }
+      .wrap-content {
         overflow: hidden;
-        .wrap-bg-img {
-            overflow: hidden;
-            position: relative;
-            &::before {
-                content: "";
-                position: absolute;
-                bottom: 0;
-                background-color: $grey_light;
-                width: 100%;
-                height: 50px;
-            }
-            .bg-img {
-                position: relative;
-                top: 0;
-                left: 0;
-                right: 0;
-                width: 100%;
-                height: 550px;
-                background-image: url('../images/dinner-restaurant.jpg');
-                background-size: cover;
-                background-position: center;
-                &::before {
-                    content: "";
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    right: 0;
-                    bottom: 0;
-                    width: 100%;
-                    height: 100%;
-                    background-color: rgba(34, 39, 80, 0.5);
-                }
-            }
+        height: 100%;
+        .inner-content {
+          height: 100%;
         }
+      }
     }
-    &.section-about {
-        .wrap-about {
-            height: 420px;
-            .img-about {
-                overflow: hidden;
-                height: 100%;
-                .wrap-img {
-                    // overflow: hidden;
-                    height: 100%;
-                    .inner-img {
-                        // overflow: hidden;
-                        height: 100%;
-                    }
-                }
-            }
-            .wrap-content {
-                overflow: hidden;
-                height: 100%;
-                .inner-content {
-                    height: 100%;
-                }
-            }
-        }
-    }
+  }
 }
 
 @include maxwidth(md) {
-    .section {
-        &.section-about {
-            .wrap-about {
-                height: auto;
-            }
-            .inner-img {
-                .img-cover {
-                    height: auto;
-                }
-            }
+  .section {
+    &.section-about {
+      .wrap-about {
+        height: auto;
+      }
+      .inner-img {
+        .img-cover {
+          height: auto;
         }
-        &.section-client .wrap-bg-img .bg-img {
-            height: 350px;
-        }
+      }
     }
+    &.section-client .wrap-bg-img .bg-img {
+      height: 350px;
+    }
+  }
 }
 
 @include maxwidth(lg) {
-    .section {
-        &.section-device {
-            .block-img {
-                min-height: 350px;
-                .inner-img .bg-img {
-                    background-position: center;
-                }
-            }
-        }
-        .img-cta {
-            height: 350px;
-            .inner-img .bg-img {
-                background-position-y: 0;
-            }
-        }
+  .section {
+    &.section-device {
+      .block-img {
+        min-height: 350px;
+        // .inner-img .bg-img {
+        //   background-position: center;
+        // }
+      }
     }
+    .img-cta {
+      height: 350px;
+      // .inner-img .bg-img {
+      //   background-position-y: 0;
+      // }
+    }
+  }
 }
 
-
 @include minmaxwidth(md, lg) {
-    .section.section-app .wrap-card {
-        justify-content: flex-start;
-    }
-    .section-profitability img {
-        max-width: 65%;
-        margin: 0 auto;
-    }
+  .section.section-app .wrap-card {
+    justify-content: flex-start;
+  }
+  .section-profitability img {
+    max-width: 65%;
+    margin: 0 auto;
+  }
 }
 
 @include minmaxwidth(lg, xl) {
-    .section {
-        .img-cta {
-            .inner-img .bg-img {
-                background-position-y: 0;
-            }
-        }
+  .section {
+    .img-cta {
+      .inner-img .bg-img {
+        background-position-y: 0;
+      }
     }
+  }
 }
