@@ -2,11 +2,11 @@
     <div class="row">
         <div class="col-12 text-center pb-5">
             <div class="section-icon">
-                <i class="fas fa-mobile-alt c-peach"></i>
+                <i class="{{ post_app.meta('icon_app') }} c-peach"></i>
             </div>
-            <span class="c-peach d-block mb-2">Application Serv'eat</span>
-                <h2 class="section-title line-bottom">Faite la différence !</h2>
-                <p class="mb-0 mt-4">Une application simple et intuitive pour satisfaire vos clients.</p>          
+            <span class="c-peach d-block mb-2">{{ post_app.meta('section_title_app') }}</span>
+                <h2 class="section-title line-bottom">{{ post_app.meta('title_application') }}</h2>
+                <p class="mb-0 mt-4">{{ post_app.meta('subtitle_application') }}</p>          
         </div>      
     </div>
 </div>

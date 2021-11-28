@@ -1,20 +1,21 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8 col-lg-7 col-xl-5 text-center">
-            <h2 class="section-title mt-5 mt-xl-0 mb-0 mb-xl-5" data-scroll data-scroll-speed="-1">Un fonctionnement simple pour vous et vos clients</h2>
+            <h2 class="section-title mt-5 mt-xl-0 mb-0 mb-xl-5" data-scroll data-scroll-speed="-1">{{ post_functioning.meta('title_functioning') }}</h2>
         </div>   
     </div>
     <div class="row justify-content-center pt-5">
         <div class="col-md-8 col-lg-4 col-xl-3 text-center">
+        {% set cards_restorer_functioning = post_functioning.meta('cards_restorer_functioning') %}
             <div class="card card-fonctionnement mb-5 mb-lg-0">
                 <div class="card-header">
                 <div class="p-4">
                     <img class="img-fluid" src="../../images/illu-restaurateur.svg" alt="">
                 </div>
-                    <h3>Restaurateur</h3>
+                    <h3>{{ cards_restorer_functioning.title_restorer_functioning }}</h3>
                 </div>
                 <div class="card-body">
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolores reprehenderit ratione doloremque voluptatibus exercitationem ex, dolor eligendi nostrum distinctio! Sunt distinctio amet quaerat minus! Ex expedita ipsum cupiditate deleniti voluptatum!</p>
+                    {{ cards_restorer_functioning.txt_restorer_functioning }}
                 </div>
             </div>
         </div>
@@ -26,15 +27,16 @@
             </div>
         </div>
         <div class="col-md-8 col-lg-4 col-xl-3 text-center">
+        {% set cards_client_functioning = post_functioning.meta('cards_client_functioning') %}
             <div class="card card-fonctionnement mt-5 mt-lg-0">
                 <div class="card-header">
                 <div class="p-4">
                     <img class="img-fluid" src="../../images/illu-client.svg" alt="">
                 </div>
-                    <h3>Clients</h3>
+                    <h3>{{ cards_client_functioning.title_client_functioning }}</h3>
                 </div>
                 <div class="card-body">
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolores reprehenderit ratione doloremque voluptatibus exercitationem ex, dolor eligendi nostrum distinctio! Sunt distinctio amet quaerat minus! Ex expedita ipsum cupiditate deleniti voluptatum!</p>
+                    {{ cards_client_functioning.txt_client_functioning }}
                 </div>
             </div>
         </div>

@@ -9,13 +9,13 @@
                     <div class="inner-img" style="background-image: url('{{ post.thumbnail.src }}')"></div>
                     <div class="content-block" data-scroll data-scroll-speed="3">
                         <div class="inner-title">
-                            <h1 class="title-demo mb-3" data-splitting>Rejoignez Serv'eat</h1>
+                            <h1 class="title-demo mb-3" data-splitting>{{ post_demo.meta('title_demo') }}</h1>
                         </div>
                         <div class="inner-subtitle">
-                            <h2 class="subtitle-demo mb-2 mb-lg-0" data-splitting>Commencez par une démo</h2>
+                            <h2 class="subtitle-demo mb-2 mb-lg-0" data-splitting>{{ post_demo.meta('subtitle_demo') }}</h2>
                         </div>
                         <div class="inner-txt">
-                            <p class="mb-0 txt-demo" data-splitting>Vous êtes interessez, écrivez-nous et nous vous répondrons au plus vite.</p>
+                            <p class="mb-0 txt-demo" data-splitting>{{ post_demo.meta('txt_demo') }}</p>
                         </div>
                     </div>
                 </div>

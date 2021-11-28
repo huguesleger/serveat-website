@@ -1,193 +1,193 @@
 body {
-    font-family: 'Mulish', sans-serif;
-    color: $color_primary;
-    background-color: #fff;
-    overflow-x: hidden;
+  font-family: "Mulish", sans-serif;
+  color: $color_primary;
+  background-color: #fff;
+  overflow-x: hidden;
 }
 
-b {
-    font-weight: 800;
-    color: $color_secondary;
+strong {
+  font-weight: 800;
+  color: $color_secondary;
 }
 
 .scroll-content {
-    position: relative;
+  position: relative;
 }
 
 #app {
-    position: relative;
-    // padding-top: 87px;
+  position: relative;
+  // padding-top: 87px;
 }
 
 .img-center {
-    display: block;
-    margin: 0 auto;
+  display: block;
+  margin: 0 auto;
 }
 
 .bg-blue-dark {
-    background-color: $color_primary;
+  background-color: $color_primary;
 }
 .bg-peach {
-    background-color: $color_secondary;
-} 
+  background-color: $color_secondary;
+}
 .bg-peach-middle {
-    background-color: $peach_middle;
+  background-color: $peach_middle;
 }
 .bg-peach-light {
-    background-color: $peach_light;
+  background-color: $peach_light;
 }
 .bg-blue-grey {
-    background-color: $blue_grey;
+  background-color: $blue_grey;
 }
 .bg-grey-light {
-    background-color: $grey_light;
+  background-color: $grey_light;
 }
 .bg-white {
-    background-color: #fff;
+  background-color: #fff;
 }
 
 .c-peach {
-    color: $color_secondary !important;
+  color: $color_secondary !important;
 }
 .c-peach-middle {
-    color: $peach_middle !important;
+  color: $peach_middle !important;
 }
 .c-peach-light {
-    color: $peach_light !important;
+  color: $peach_light !important;
 }
 .c-blue-dark {
-    color: $color_primary !important;
+  color: $color_primary !important;
 }
 .c-blue-grey {
-    color: $blue_grey !important;
+  color: $blue_grey !important;
 }
 .c-grey {
-    color: $grey-dark !important;
+  color: $grey-dark !important;
 }
 .c-grey-light {
-    color: $grey_light !important;
+  color: $grey_light !important;
 }
 .c-white {
-    color: #fff  !important;
+  color: #fff !important;
 }
 
 .position-relative {
-    position: relative;
+  position: relative;
 }
 
 .pl-65 {
-    padding-left: 65px;
+  padding-left: 65px;
 }
 .py-8 {
-    padding-top: 8rem;
-    padding-bottom: 8rem;
+  padding-top: 8rem;
+  padding-bottom: 8rem;
 }
 .pt-8 {
-    padding-top: 8rem;
+  padding-top: 8rem;
 }
 .pb-8 {
-    padding-bottom: 8rem;
+  padding-bottom: 8rem;
 }
 .py-6 {
-    padding-top: 6rem;
-    padding-bottom: 6rem;
+  padding-top: 6rem;
+  padding-bottom: 6rem;
 }
 .pt-6 {
-    padding-top: 6rem;
+  padding-top: 6rem;
 }
 .pb-6 {
-    padding-bottom: 6rem;
+  padding-bottom: 6rem;
 }
 
 .mt-6 {
-    margin-top: 6rem;
+  margin-top: 6rem;
 }
 .mb-6 {
-    margin-bottom: 6rem;
+  margin-bottom: 6rem;
 }
 .mt-12-negative {
-    margin-top: -12rem;
+  margin-top: -12rem;
 }
 .mt-6-negative {
-    margin-top: -6rem;
+  margin-top: -6rem;
 }
 
 .font-12 {
-    font-size: 0.75rem;
+  font-size: 0.75rem;
 }
 .font-14 {
-    font-size: 0.875rem;
+  font-size: 0.875rem;
 }
 .font-24 {
-    font-size: 1.5rem;
+  font-size: 1.5rem;
 }
 
 .font-weight-light {
-    font-weight: 100;
+  font-weight: 100;
 }
 
 #scroll-to-top {
-    position: fixed;
-    right: 15px;
-    bottom: 25px;
-    .btn-to-top {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 40px;
-        height: 40px;
-        border-radius: 0.45rem;
-        background-color: $color_primary;
-        color: #fff;
-        opacity: 0;
-        transition: opacity .2s ease-in-out;
-        cursor: pointer;
-        &.show {
-            opacity: 1;
-        }
+  position: fixed;
+  right: 15px;
+  bottom: 25px;
+  .btn-to-top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 0.45rem;
+    background-color: $color_primary;
+    color: #fff;
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+    cursor: pointer;
+    &.show {
+      opacity: 1;
     }
+  }
 }
 
 .box-shadow {
-    @include box-shadow;
+  @include box-shadow;
 }
 .z-index-1 {
-    z-index: 1;
+  z-index: 1;
 }
 
 html.has-scroll-smooth {
-    overflow: hidden;
-    position: fixed;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;  
+  overflow: hidden;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
 }
 
 @include maxwidth(xl) {
-    #scroll-to-top {
-        display: none;
-    }
+  #scroll-to-top {
+    display: none;
+  }
 }
 
 @include minwidth(xl) {
-    .pt-xl-8 {
-        padding-top: 8rem !important;
-    }
-    .pb-xl-8 {
-        padding-bottom: 8rem!important;
-    }
+  .pt-xl-8 {
+    padding-top: 8rem !important;
+  }
+  .pb-xl-8 {
+    padding-bottom: 8rem !important;
+  }
 }
 
 @include minwidth(lg) {
-    .py-lg-6 {
-        padding-top: 6rem !important;
-        padding-bottom: 6rem !important;
-    }
-    .mt-lg-6 {
-        margin-top: 6rem;
-    }
-    .mt-lg-6-negative {
-        margin-top: -6rem;
-    }
+  .py-lg-6 {
+    padding-top: 6rem !important;
+    padding-bottom: 6rem !important;
+  }
+  .mt-lg-6 {
+    margin-top: 6rem;
+  }
+  .mt-lg-6-negative {
+    margin-top: -6rem;
+  }
 }

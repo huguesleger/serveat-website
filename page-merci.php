@@ -6,9 +6,11 @@
 
 $context = Timber::context();
 
-$templates = array( 'page-merci.twig', 'index.twig' );
 
 $timber_post     = new Timber\Post();
 $context['post'] = $timber_post;
 
-Timber::render( $templates, $context, $timber_post);
+$timber_confirm     = new Timber\Post();
+$context['post_confirm'] = $timber_confirm;
+
+Timber::render( 'page-merci.twig', $context);

@@ -2,22 +2,23 @@
     <div class="row">
         <div class="col-12 text-center pb-4">
             <div class="section-icon">
-                <i class="fab fa-buffer c-peach"></i>
+                <i class="{{ post_offer.meta('icon_offer') }} c-peach"></i>
             </div>
-            <span class="c-peach d-block mb-2">Offres</span>
-            <h2 class="section-title">Une solution à porté de mains</h2>
-            <p class="mb-5">Serv'eat maximisera votre temps et votre argent</p>
+            <span class="c-peach d-block mb-2">{{ post_offer.meta('section_title_offer') }}</span>
+            <h2 class="section-title">{{ post_offer.meta('title_offer') }}</h2>
+            <p class="mb-5">{{ post_offer.meta('subtitle_offer') }}</p>
         </div>
     </div>
     <div class="row justify-content-center">
     <div class="col-xl-3 col-lg-4 col-md-6 mb-4 mb-md-0">
         <div class="panel-pricing" data-scroll data-scroll-speed="2">
+        {% set card_offers_standard = post_device.meta('card_offers_standard') %}
                 <div class="pricing-plan">
-                    <h3 class="pricing-title">Standard</h3>
+                    <h3 class="pricing-title">{{ card_offers_standard.card_offer_title}}</h3>
                     <div class="pricing-icon mx-auto">
                         <img class="img-fluid" src="../../../images/icon-pricing-standard-v2.png" alt="">
                     </div>
-                     <span class="pricing-custom d-block">La meilleure offre pour votre restaurant.</span>
+                     <span class="pricing-custom d-block">{{ card_offers_standard.card_offer_subtitle}}</span>
                     <div class="pricing-features">
                         <ul class="list-unstyled mt-3">
                             <li>1 ecran LCD (de 22 à 40 pouces)</li>
@@ -37,20 +38,21 @@
     </div>
         <div class="col-xl-3 col-lg-4 col-md-6 mb-4 mb-md-0">
             <div class="panel-pricing" data-scroll data-scroll-speed="2">
+            {% set card_offers_personalise = post_device.meta('card_offers_personalise') %}
                 <div class="pricing-plan">
-                    <h3 class="pricing-title">Personnalisé</h3>
+                    <h3 class="pricing-title">{{ card_offers_personalise.card_offer_title}}</h3>
                     <div class="pricing-icon mx-auto">
                         <img class="img-fluid" src="../../../images/icon-pricing-custom-v2.png" alt="">
                     </div>
-                    <span class="pricing-custom d-block">Optez pour une offre adaptée à votre restaurant.</span>
+                    <span class="pricing-custom d-block">{{ card_offers_personalise.card_offer_subtitle}}</span>
                     <div class="d-flex my-3">
                         <div class="item-icon">
                             <img class="img-fluid icon" src="../../../images/icon-support.svg" alt="ecran">
-                            <p class="font-12 mb-0 mt-2">Augmenter le nombre d'écran LCD et tablettes selon vos besoins</p>
+                            <p class="font-12 mb-0 mt-2">{{ card_offers_personalise.card_offer_txt_left}}</p>
                         </div>
                         <div class="item-icon">
                             <img class="img-fluid icon" src="../../../images/icon-table.svg" alt="table">
-                            <p class="font-12 mb-0 mt-2">Augmenter le nombre de tables utilisant le système Serv'eat</p>
+                            <p class="font-12 mb-0 mt-2">{{ card_offers_personalise.card_offer_txt_right}}</p>
                         </div>
                     </div>
                     <a href="#" class="btn btn-round btn-secondary btn-sm mx-auto">Contactez-nous</a>

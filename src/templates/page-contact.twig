@@ -12,7 +12,7 @@
                             <h1 class="title-page" data-splitting>{{post.title}}</h1>
                         </div>
                         <div class="inneer-subtitle">
-                            <p class="subtitle" data-splitting>Besoin de renseignement, contactez-nous</p>
+                            <p class="subtitle" data-splitting>{{ post_header.meta('subtitle_header_page') }}</p>
                         </div>
                     </div>
                 </div>
@@ -25,8 +25,8 @@
                 <div class="col-lg-6">
                     <div class="content-info bg-peach d-none d-lg-flex">
                         <div class="content-top">
-                            <h2 class="mb-5">Avec Serv'eat, tout va plus vite.</h2>
-                            <p>Vous voulez en savoir plus sur notre solution ?<br>Envoyez-nous un message.</p>
+                            <h2 class="mb-5">{{ post_contact.meta('title_contact') }}</h2>
+                            <p>{{ post_contact.meta('txt_contact') }}.</p>
                         </div>
                         <div class="wrap-img">
                             <img class="img-fluid" src="../images/illu-contact-email.svg" alt="">

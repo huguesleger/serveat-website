@@ -4,13 +4,10 @@
             <div class="block-txt pt-xl-8 p-3 pb-lg-5 px-lg-5 mt-lg-5 mb-5 mb-lg-0">
                 <div class="inner-block" data-scroll data-scroll-sticky data-scroll-target="#featureContainer">
                     <div class="section-icon mb-2">
-                        <i class="fas fa-tv c-peach"></i>
-                        <i class="fas fa-tablet-alt c-peach"></i>
+                        <i class="{{ post_client.meta('icon_client') }} c-peach"></i>
                     </div>
-                    <h2 class="section-title c-blue-dark mb-4">Satisfaisez<br>vos clients</h2>
-                    <div class="">
-                        <p class="mb-0">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illo, aliquam corporis magni veritatis ea animi minima aliquid ducimus odit voluptate molestiae nesciunt modi maxime nemo! Rem excepturi molestias voluptates numquam?</p>
-                    </div>
+                    <h2 class="section-title c-blue-dark mb-4">{{ post_client.meta('title_client') }}</h2>
+                    {{ post_client.meta('txt_client') }}
                 </div>
             </div>
         </div>

@@ -3,21 +3,18 @@
         <div class="col-12 col-lg-5">
             <div class="block-txt block-center p-4 p-lg-5 h-100">
                 <div class="section-icon mb-2">
-                    <i class="fas fa-tv c-peach"></i>
-                    <i class="fas fa-tablet-alt c-peach"></i>
+                    <i class="{{ post_device.meta('icon_device') }} c-peach"></i>
+                    <i class="{{ post_device.meta('icon_optional_device') }} c-peach"></i>
                 </div>
-                <h2 class="section-title c-blue-dark mb-4">Suivez vos tables<br>en temps réel</h2>
-                <div class="">
-                    <p class="mb-0">Visualisez vos tables sur <b>écrans LCD</b> et <b>tablettes</b>, suivez l'avancement des demandes et gagner en optimisation de temps.</p>
-                    <br>
-                    <p>Simple et visuel, gérer les demandes de vos tables.</p>
-                    <ul class="list-unstyled">
-                        <li><span class="state state-waiter"></span>Appel serveur(se)</li>
-                        <li><span class="state state-payment"></span>Demande d'addition</li>
-                        <li><span class="state state-white"></span>Aucune demande sur la table</li>
-                        <li><span class="state state-grey"></span>Table libre</li>
-                    </ul> 
-                </div>
+                <h2 class="section-title c-blue-dark mb-4">{{post_device.meta('title_device')}}</h2>
+                {{ post_device.meta('txt_device') }}
+                <ul class="list-unstyled">
+                {% set list_states = post_device.meta('list_states') %}
+                    <li><span class="state state-waiter"></span>{{ list_states.step_1}}</li>
+                    <li><span class="state state-payment"></span>{{ list_states.step_2}}</li>
+                    <li><span class="state state-white"></span>{{ list_states.step_3}}</li>
+                    <li><span class="state state-grey"></span>{{ list_states.step_4}}</li>
+                </ul> 
             </div>
         </div>
         <div class="col-12 col-lg-7 block-img">
