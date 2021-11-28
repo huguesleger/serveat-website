@@ -28,9 +28,11 @@
         </div>
 
         {% block footer %}
-            <footer class="footer" data-scroll-section>
-                {% include 'layout/footer.twig' %}
-            </footer>
+                {% block contentFooter %}
+                <footer class="footer" data-scroll-section>
+                    {% include 'layout/footer.twig' %}
+                </footer>
+                {% endblock %}
             {{ function('wp_footer') }}
         {% endblock %} 
         <div class="page-transition-backdrop"></div> 

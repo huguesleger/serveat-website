@@ -2,7 +2,7 @@
 
 {% block content %}
 <div class="page-container" data-barba="container" data-barba-namespace="thanks">
-    <div class="header-page header-thank" data-scroll-section>
+    <div class="header-thanks" data-scroll-section>
         <div class="header-content" style="background-image: url('{{ post.thumbnail.src }}')"></div>
     </div>
     <div class="content-thank" data-scroll-section>
@@ -21,4 +21,8 @@
         </div>
     </div>
 </div>
+{% endblock %}
+{% block footer %}
+{{ function('wp_footer') }}
+    {% block contentFooter %}{% endblock %}
 {% endblock %}
