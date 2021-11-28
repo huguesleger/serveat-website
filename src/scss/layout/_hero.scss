@@ -41,6 +41,8 @@
     img {
       max-height: 400px;
       opacity: 0;
+      transform: translateY(10px);
+      transition: opacity 0.2s translate 0.2s;
     }
     .bg-shape {
       clip-path: polygon(0% 120%, 0% 0%, 100% -25%, 55% 100%);
