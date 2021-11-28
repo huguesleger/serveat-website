@@ -10,6 +10,12 @@ $postCardAvantage = array(
 	'order'		=> 'ASC'
 );
 
+$postCardSlider = array(
+	'post_type' => 'card-slider',
+	'posts_per_page' => 4,
+	'order'		=> 'ASC'
+);
+
 $postListOffer = array(
 	'post_type' => 'list-offer',
 	'posts_per_page' => -1,
@@ -26,6 +32,10 @@ $postCardClient = array(
 $context['posts_card_avantage'] = new Timber\PostQuery($postCardAvantage);
 $timber_post_card_avantage     = Timber::query_post('card-avantage');
 $context['post_card_avantage'] = $timber_post_card_avantage;
+
+$context['posts_card_slider'] = new Timber\PostQuery($postCardSlider);
+$timber_post_card_slider     = Timber::query_post('card-slider');
+$context['post_card_slider'] = $timber_post_card_slider;
 
 $context['posts_list_offer'] = new Timber\PostQuery($postListOffer);
 $timber_post_list_offer     = Timber::query_post('list-offer');

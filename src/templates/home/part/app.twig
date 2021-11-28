@@ -15,31 +15,29 @@
         <div class="row">
         <div class="col-md-4 order-2 order-md-1">
             <div class="wrap-card" data-scroll>
-            <div class="inner-card" data-scroll data-scroll-speed="1">
-                <div class="card card-app card-1 active">
-                    <div class="card-header">
-                        <i class="fas fa-qrcode"></i>
-                        <h3>QR code</h3>
-                    </div>
-                    <div class="card-body">
-                        <p>Après avoir scanner le QR code de la table le client aura accès aux fonctionnalités de Serv'eat.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="inner-card" data-scroll data-scroll-speed="2">
-                <div class="card card-app card-2">
-                        <div class="card-header">
-                            <div class="d-flex justify-content-center mb-2">
-                                <i class="icon serveat-waiter me-2"></i>
-                                <i class="icon serveat-payment"></i>
+                {% for i, post_card_slider in posts_card_slider %}
+                    {% if loop.index == 1 or loop.index == 2 %}
+                    {% set i = i + 1 %}
+                        <div class="inner-card" data-scroll data-scroll-speed="{{i}}">
+                            <div class="card card-app card-{{i}}{% if loop.first %} active{% endif %}">
+                                <div class="card-header">
+                                {% if post_card_slider.icon_optional_slider is not empty %}
+                                    <div class="d-flex justify-content-center mb-2">
+                                        <i class="{{post_card_slider.icon_slider}} me-2"></i>
+                                        <i class="{{post_card_slider.icon_optional_slider}}"></i>
+                                    </div>
+                                {% else %}
+                                    <i class="{{post_card_slider.icon_slider}}"></i>
+                                {% endif %}
+                                    <h3>{{post_card_slider.title}}</h3>
+                                </div>
+                                <div class="card-body">
+                                    <p>{{post_card_slider.txt_slider}}</p>
+                                </div>
                             </div>
-                            <h3>Appel / Addition</h3>
                         </div>
-                        <div class="card-body">
-                            <p>Le client pourra à tout moment faire un appel serveur(se) où une demande d'addition simplement.</p>
-                        </div>
-                    </div>
-                </div>
+                    {% endif %}
+                {% endfor %}
             </div>
         </div>
         <div class="col-md-4 order-1 order-md-2">
@@ -66,28 +64,29 @@
         </div>
         <div class="col-md-4 order-3">
             <div class="wrap-card" data-scroll>
-            <div class="inner-card" data-scroll data-scroll-speed="1">
-                <div class="card card-app card-3">
-                    <div class="card-header">
-                        <i class="icon serveat-notification"></i>
-                        <h3>Notifications</h3>
-                    </div>
-                    <div class="card-body">
-                        <p>A chaque appel une notification sera envoyée, le client pourra visualiser sa demande en cours.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="inner-card" data-scroll data-scroll-speed="2">
-                <div class="card card-app card-4">
-                        <div class="card-header">
-                            <i class="icon serveat-card"></i>
-                            <h3>Votre carte visible</h3>
+                {% for i, post_card_slider in posts_card_slider %}
+                    {% if loop.index == 3 or loop.index == 4 %}
+                    {% set i = i + 1 %}
+                        <div class="inner-card" data-scroll data-scroll-speed="{% if loop.index == 3 %}1 {% elseif loop.index == 4 %}2{% endif %}">
+                            <div class="card card-app card-{{i}}">
+                                <div class="card-header">
+                                {% if post_card_slider.icon_optional_slider is not empty %}
+                                    <div class="d-flex justify-content-center mb-2">
+                                        <i class="{{post_card_slider.icon_slider}} me-2"></i>
+                                        <i class="{{post_card_slider.icon_optional_slider}}"></i>
+                                    </div>
+                                {% else %}
+                                    <i class="{{post_card_slider.icon_slider}}"></i>
+                                {% endif %}
+                                    <h3>{{post_card_slider.title}}</h3>
+                                </div>
+                                <div class="card-body">
+                                    <p>{{post_card_slider.txt_slider}}</p>
+                                </div>
+                            </div>
                         </div>
-                        <div class="card-body">
-                            <p>Votre carte sera mise en avant sur notre application, pour que le client visualise et commande rapidement.</p>
-                        </div>
-                    </div>        
-                </div>  
+                    {% endif %}
+                {% endfor %}
             </div>
         </div>
     </div>
