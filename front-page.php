@@ -2,6 +2,42 @@
 
 
 $context          			= Timber::context();
+
+
+$postCardAvantage = array(
+	'post_type' => 'card-avantage',
+	'posts_per_page' => -1,
+	'order'		=> 'ASC'
+);
+
+$postListOffer = array(
+	'post_type' => 'list-offer',
+	'posts_per_page' => -1,
+	'order'		=> 'ASC'
+);
+
+$postCardClient = array(
+	'post_type' => 'card-client',
+	'posts_per_page' => -1,
+	'order'		=> 'ASC'
+);
+
+
+$context['posts_card_avantage'] = new Timber\PostQuery($postCardAvantage);
+$timber_post_card_avantage     = Timber::query_post('card-avantage');
+$context['post_card_avantage'] = $timber_post_card_avantage;
+
+$context['posts_list_offer'] = new Timber\PostQuery($postListOffer);
+$timber_post_list_offer     = Timber::query_post('list-offer');
+$context['post_list_offer'] = $timber_post_list_offer;
+
+$context['posts_card_client'] = new Timber\PostQuery($postCardClient);
+$timber_post_card_client     = Timber::query_post('card-client');
+$context['post_card_client'] = $timber_post_card_client;
+
+
+
+
 $context['posts'] 			= new Timber\Post();
 
 $timber_post_hero             = new Timber\Post();

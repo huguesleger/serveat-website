@@ -1,49 +1,19 @@
 <div class="mt-12-negative"></div>
 <div class="container">
     <div class="row">
+    {% for i, post_card_atout in posts_card_atout %} 
+    {% set i = i + 1 %}  
         <div class="col-md-6 col-xl-3">
             <div class="card card-number">
                 <div class="card-header pt-5">
-                    <span class="number">01</span>
-                    <h3>title</h3>
+                    <span class="number">0{{i}}</span>
+                    <h3>{{post_card_atout.title}}</h3>
                 </div>
                 <div class="card-body pt-3">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates, rem voluptatem! Quo odit ullam, possimus amet sunt nobis magnam autem illum aspernatur quos iusto cum quod modi iste expedita hic.</p>
+                    <p>{{post_card_atout.meta('txt_card_atout')}}</p>
                 </div>
             </div>
         </div>
-        <div class="col-md-6 col-xl-3">
-            <div class="card card-number">
-                <div class="card-header pt-5">
-                    <span class="number">02</span>
-                    <h3>title</h3>
-                </div>
-                <div class="card-body pt-3">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates, rem voluptatem! Quo odit ullam, possimus amet sunt nobis magnam autem illum aspernatur quos iusto cum quod modi iste expedita hic.</p>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-6 col-xl-3">
-            <div class="card card-number">
-                <div class="card-header pt-5">
-                    <span class="number">03</span>
-                    <h3>title</h3>
-                </div>
-                <div class="card-body pt-3">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates, rem voluptatem! Quo odit ullam, possimus amet sunt nobis magnam autem illum aspernatur quos iusto cum quod modi iste expedita hic.</p>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-6 col-xl-3">
-            <div class="card card-number">
-                <div class="card-header pt-5">
-                    <span class="number">04</span>
-                    <h3>title</h3>
-                </div>
-                <div class="card-body pt-3">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates, rem voluptatem! Quo odit ullam, possimus amet sunt nobis magnam autem illum aspernatur quos iusto cum quod modi iste expedita hic.</p>
-                </div>
-            </div>
-        </div>                        
+    {% endfor %}                       
     </div>
 </div>

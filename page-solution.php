@@ -3,8 +3,42 @@
  * Template Name: Solution page
  */
 
+
+$postListServeat = array(
+    'post_type' => 'list-serveat',
+	'posts_per_page' => 4,
+	'order'		=> 'ASC'
+);
+
+$postPackServeat = array(
+    'post_type' => 'pack-serveat',
+	'posts_per_page' => 3,
+	'order'		=> 'ASC'
+);
+
+$postCardAtout = array(
+    'post_type' => 'atout-serveat',
+	'posts_per_page' => 4,
+	'order'		=> 'ASC'
+);
+
+
 $context = Timber::context();
+
 $context['post'] = new Timber\Post();
+
+$context['posts_list_serveat'] = new Timber\PostQuery($postListServeat);
+$timber_post_list_serveat     = Timber::query_post('list-serveat');
+$context['post_list_serveat'] = $timber_post_list_serveat;
+
+$context['posts_pack_serveat'] = new Timber\PostQuery($postPackServeat);
+$timber_post_pack_serveat     = Timber::query_post('pack-serveat');
+$context['post_pack_serveat'] = $timber_post_pack_serveat;
+
+$context['posts_card_atout'] = new Timber\PostQuery($postCardAtout);
+$timber_post_card_atout     = Timber::query_post('atout-serveat');
+$context['post_card_atout'] = $timber_post_card_atout;
+
 
 $timber_post_header         = new Timber\Post();
 $context['post_header'] = $timber_post_header;

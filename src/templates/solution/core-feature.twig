@@ -10,39 +10,19 @@
             </div>
         </div>
         <div class="row pt-5">
+        {% for post_pack_serveat in posts_pack_serveat %}
             <div class="col-lg-4">
                 <div class="item-list d-flex">
                     <div class="item-icon mt-1">
-                        <i class="far fa-grin c-peach"></i>
+                        <i class="{{post_pack_serveat.icon_list_pack}} c-peach"></i>
                     </div>
                     <div class="item-list-content ms-3">
-                        <h3>title item</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                        <h3>{{post_pack_serveat.title}}</h3>
+                        <p>{{post_pack_serveat.meta('txt_list_pack')}}</p>
                     </div>
                 </div>                              
             </div>
-            <div class="col-lg-4">
-                <div class="item-list d-flex">
-                    <div class="item-icon mt-1">
-                        <i class="far fa-grin c-peach"></i>
-                    </div>
-                    <div class="item-list-content ms-3">
-                        <h3>title item</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                    </div>
-                </div>                              
-            </div>
-            <div class="col-lg-4">
-                <div class="item-list d-flex">
-                    <div class="item-icon mt-1">
-                        <i class="far fa-grin c-peach"></i>
-                    </div>
-                    <div class="item-list-content ms-3">
-                        <h3>title item</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                    </div>
-                </div>                              
-            </div>            
+         {% endfor %}           
         </div>
     </div>
 </div>

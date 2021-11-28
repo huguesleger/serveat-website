@@ -10,95 +10,22 @@
         </div>
     </div>
     <div class="row">
+    {% for post_card_avantage in posts_card_avantage %}
         <div class="col-md-6 col-lg-4 py-2 mb-3 mb-lg-0">
             <div class="card" data-scroll data-scroll-speed="1">
                 <div class="card-header">
                     <div class="card-icon">
-                        <i class="fas fa-user-clock"></i>
+                        <i class="{{post_card_avantage.icon_card_avantage}}"></i>
                     </div>
                     <div class="card-title">
-                        <h3>Temps d'attente réduis</h3>
+                        <h3>{{post_card_avantage.title}}</h3>
                     </div>
                 </div>
                 <div class="card-body">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis nam beatae ipsam aut neque voluptas corrupti optio vel, et laborum reiciendis iste repellendus perferendis eius enim, commodi ipsa quibusdam ut?</p>
+                    <p>{{post_card_avantage.meta('txt_card_avantage')}}</p>
                 </div>
             </div>
         </div>
-        <div class="col-md-6 col-lg-4 py-2 mb-3 mb-lg-0">
-            <div class="card" data-scroll data-scroll-speed="1">
-                <div class="card-header">
-                    <div class="card-icon">
-                        <i class="fas fa-qrcode"></i>
-                    </div>
-                    <div class="card-title">
-                        <h3>Accès via QR code</h3>
-                    </div>
-                </div>
-                <div class="card-body">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis nam beatae ipsam aut neque voluptas corrupti optio vel, et laborum reiciendis iste repellendus perferendis eius enim, commodi ipsa quibusdam ut?</p>
-                </div>               
-            </div>
-        </div>                
-        <div class="col-md-6 col-lg-4 py-2 mb-3 mb-lg-0">
-            <div class="card" data-scroll data-scroll-speed="1">
-                <div class="card-header">
-                    <div class="card-icon">
-                        <i class="fas fa-tv"></i>
-                    </div>
-                    <div class="card-title">
-                        <h3>Visualisation des tables</h3>
-                    </div>
-                </div>
-                <div class="card-body">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis nam beatae ipsam aut neque voluptas corrupti optio vel, et laborum reiciendis iste repellendus perferendis eius enim, commodi ipsa quibusdam ut?</p>
-                </div>              
-            </div>
-        </div>
-        <div class="col-md-6 col-lg-4 py-2 mb-3 mb-lg-0">
-            <div class="card" data-scroll data-scroll-speed="1">
-                <div class="card-header">
-                    <div class="card-icon">
-                        <i class="fas fa-utensils"></i>
-                    </div>
-                    <div class="card-title">
-                        <h3>Consultation de la carte</h3>
-                    </div>
-                </div>
-                <div class="card-body">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis nam beatae ipsam aut neque voluptas corrupti optio vel, et laborum reiciendis iste repellendus perferendis eius enim, commodi ipsa quibusdam ut?</p>
-                </div>              
-            </div>
-        </div>
-        <div class="col-md-6 col-lg-4 py-2 mb-3 mb-lg-0">
-            <div class="card" data-scroll data-scroll-speed="1">
-                <div class="card-header">
-                    <div class="card-icon">
-                        <i class="fas fa-smile"></i>
-                    </div>
-                    <div class="card-title">
-                        <h3>Satisfaction de la clientèle</h3>
-                    </div>
-                </div>
-                <div class="card-body">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis nam beatae ipsam aut neque voluptas corrupti optio vel, et laborum reiciendis iste repellendus perferendis eius enim, commodi ipsa quibusdam ut?</p>
-                </div>              
-            </div>
-        </div>
-        <div class="col-md-6 col-lg-4 py-2 mb-3 mb-lg-0">
-            <div class="card" data-scroll data-scroll-speed="1">
-                <div class="card-header">
-                    <div class="card-icon">
-                        <i class="fas fa-user-cog"></i>
-                    </div>
-                    <div class="card-title">
-                        <h3>Utilisation intuitive</h3>
-                    </div>
-                </div>
-                <div class="card-body">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis nam beatae ipsam aut neque voluptas corrupti optio vel, et laborum reiciendis iste repellendus perferendis eius enim, commodi ipsa quibusdam ut?</p>
-                </div>              
-            </div>
-        </div>                              
+    {% endfor %}
     </div>
 </div>
