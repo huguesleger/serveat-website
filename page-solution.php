@@ -58,4 +58,7 @@ $context['post_atout'] = $timber_post_atout;
 $timber_post_form         = new Timber\Post();
 $context['post_form'] = $timber_post_form;
 
+$timber_post_about         = new Timber\Post();
+$context['post_about'] = $timber_post_about;
+
 Timber::render( 'page-solution.twig', $context);

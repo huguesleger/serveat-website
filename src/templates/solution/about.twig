@@ -1,12 +1,14 @@
 <div class="container">
-    <div class="row justify-content-center">
-        <div class="col-lg-8 col-xl-5 text-center">
-        <div class="mb-5" data-scroll data-scroll-speed="2">
-                <h2 class="section-title">Lorem ipsum</h2>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorum possimus sequi id qui! Eaque animi at voluptatum, quas, modi impedit provident ipsam incidunt architecto nesciunt accusantium ullam, similique molestias? Modi!</p>
+    {% if post_about.meta('affichage_txt') == true %}
+        <div class="row justify-content-center">
+            <div class="col-lg-8 col-xl-5 text-center">
+            <div class="mb-5" data-scroll data-scroll-speed="2">
+                    <h2 class="section-title mb-3">{{ post_about.meta('title_about') }}</h2>
+                    <p>{{ post_about.meta('subtitle_about') }}</p>
+                </div>
             </div>
         </div>
-    </div>
+    {% endif %}
     <div class="row wrap-about" data-scroll data-scroll-speed="2">
         <div class="col-md-3">
         <div class="img-about mb-4 mb-md-0">
@@ -30,8 +32,9 @@
         <div class="wrap-content">
             <div class="inner-content" data-scroll data-scroll-speed="6">
                 <div class="content-about bg-blue-dark text-white p-5 h-100" data-scroll data-scroll-speed="-2">
-                    <p class="font-24 font-weight-light">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam eius autem voluptatibus quam tempora obcaecati? Qui id, iusto porro eveniet, natus, maiores minus eum placeat accusamus repellat ab nemo sunt!</p>
+                {% set bloc_txts_about = post_about.meta('bloc_txts_about') %}
+                    <p class="font-24 font-weight-light">{{ bloc_txts_about.title_block_about }}</p>
+                    <p>{{ bloc_txts_about.txt_block_about }}</p>
                 </div>
             </div>
         </div>
