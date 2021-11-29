@@ -7,6 +7,7 @@ import { initRouting } from "./route";
 import { loader } from "./components/loader";
 import { titlePage } from "./components/title-page";
 import { titleDemo } from "./components/title-demo";
+import { removeScript } from "./components/remove-script-form";
 
 window.App = {};
 
@@ -37,6 +38,10 @@ App.init = function () {
   const slider = document.querySelector(".slider-device");
   if (slider) {
     sliderApp();
+  }
+  const homePage = document.querySelector(".page-home");
+  if (homePage) {
+    removeScript();
   }
   const contact = document.querySelector(".wrap-form-contact");
   if (contact) {
