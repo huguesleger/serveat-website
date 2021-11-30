@@ -8,9 +8,9 @@ export const sliderApp = function () {
     loop: true,
     autoplay: {
       delay: 3500,
-      disableOnInteraction: true,
+      disableOnInteraction: false,
+      pauseOnMouseEnter: true,
     },
-    // spaceBetween: 30,
     pagination: {
       el: ".wrapper-content-slider",
       clickable: true,
