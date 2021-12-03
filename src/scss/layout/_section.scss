@@ -160,9 +160,15 @@
       }
     }
   }
+  &.section-fonctionnement {
+    position: relative;
+    z-index: -1;
+  }
   &.section-about {
     .wrap-about {
-      height: 420px;
+      &.fixed-height {
+        height: 420px;
+      }
       .img-about {
         overflow: hidden;
         height: 100%;
