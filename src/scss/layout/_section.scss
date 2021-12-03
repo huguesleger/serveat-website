@@ -34,15 +34,6 @@
     font-size: 1.5rem;
     line-height: 1;
   }
-  &.section-bg {
-    width: 100%;
-    height: 100%;
-    background-size: cover;
-    background-position: center;
-  }
-  &.bg-avantages {
-    background-image: url("../images/bg-restaurant.jpg");
-  }
   &.bg-opaque {
     position: relative;
     &::before {
@@ -73,12 +64,6 @@
         position: relative;
         height: 100%;
         overflow: hidden;
-        // .bg-img {
-        //   background-size: cover;
-        //   background-position: right;
-        //   background-image: url("../images/bg-restaurant-v4.jpg");
-        //   height: 100%;
-        // }
       }
     }
   }
@@ -89,14 +74,6 @@
       position: relative;
       height: 100%;
       overflow: hidden;
-      // .bg-img {
-      //   background-image: url("../images/bg-restaurant.jpg");
-      //   background-size: cover;
-      //   // background-position-x: center;
-      //   // background-position-y: -200px;
-      //   background-position: center;
-      //   height: 100%;
-      // }
     }
   }
   &.section-profitability {
@@ -143,35 +120,9 @@
       z-index: -1;
     }
   }
-  // &.section-materiel {
-  //     height: 400px;
-  // }
   &.section-application {
     padding-top: 220px;
     padding-bottom: 120px;
-  }
-  &.section-listing {
-    position: relative;
-  }
-  &.section-fonctionnement {
-    position: relative;
-    z-index: -1;
-    .wrap-pattern {
-      width: 100%;
-      bottom: 0;
-      height: 388px;
-      position: absolute;
-      overflow: hidden;
-      .bg-pattern {
-        position: relative;
-        width: 100%;
-        background-image: url("../images/pattern-food.svg");
-        background-repeat: repeat;
-        background-size: 150px;
-        height: 100%;
-        opacity: 0.2;
-      }
-    }
   }
   &.section-client {
     overflow: hidden;
@@ -193,7 +144,6 @@
         right: 0;
         width: 100%;
         height: 550px;
-        background-image: url("../images/dinner-restaurant.jpg");
         background-size: cover;
         background-position: center;
         &::before {
@@ -217,10 +167,8 @@
         overflow: hidden;
         height: 100%;
         .wrap-img {
-          // overflow: hidden;
           height: 100%;
           .inner-img {
-            // overflow: hidden;
             height: 100%;
           }
         }
@@ -259,16 +207,10 @@
     &.section-device {
       .block-img {
         min-height: 350px;
-        // .inner-img .bg-img {
-        //   background-position: center;
-        // }
       }
     }
     .img-cta {
       height: 350px;
-      // .inner-img .bg-img {
-      //   background-position-y: 0;
-      // }
     }
   }
 }

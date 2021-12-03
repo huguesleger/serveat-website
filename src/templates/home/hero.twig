@@ -1,4 +1,4 @@
-<div class="hero-bg-img" data-scroll data-scroll-speed="-1" data-scroll-position="top" data-scroll-target="#hero"></div>
+<div class="hero-bg-img" style="background-image: url('{{ post_hero.meta('image_bg_hero') }}')" data-scroll data-scroll-speed="-1" data-scroll-position="top" data-scroll-target="#hero"></div>
 <div class="bg-shape" data-scroll data-scroll-speed="-1" data-scroll-position="top" data-scroll-target="#hero"></div>
 <div class="container position-relative z-index-1">
     <div class="row">
@@ -17,7 +17,7 @@
     </div>
     <div class="row justify-content-center">
         <div class="col-12 col-md-10 col-lg-7">
-            <img class="img-fluid img-center" src="../../images/hero-app.png" alt="Serveat App">
+            <img class="img-fluid img-center" src="{{ post_hero.meta('image_hero') }}" alt="{{ post_hero.meta('alt_hero') }}">
         </div>
     </div>
 </div>
@@ -44,10 +44,5 @@
 <div class="wrapper-element element-5">
     <div class="element-icon bg-white" data-scroll data-scroll-speed="1">
         <i class="icon serveat-card c-blue-grey"></i>
-    </div>
-</div>
-<div class="wrapper-element element-6">
-    <div class="element-icon bg-white" data-scroll data-scroll-speed="2">
-        <i class="icon serveat-cancel c-blue-grey"></i>
     </div>
 </div>

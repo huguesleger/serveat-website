@@ -5,6 +5,10 @@ body {
   overflow-x: hidden;
 }
 
+a {
+  text-decoration: none;
+}
+
 strong {
   font-weight: 800;
   color: $color_secondary;
@@ -133,6 +137,7 @@ strong {
   position: fixed;
   right: 15px;
   bottom: 25px;
+  z-index: 1;
   .btn-to-top {
     display: flex;
     justify-content: center;

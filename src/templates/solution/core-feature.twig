@@ -9,11 +9,11 @@
                     </div>
                 </div>
                 <div class="col-lg-7">
-                    <img class="img-fluid" src="../../images/tv.png" alt="">
+                    <img class="img-fluid" src="{{post_pack.meta('image_pack')}}" alt="{{post_pack.meta('alt_pack')}}">
                 </div>
             {% else %}
                 <div class="col-12">
-                    <img class="img-fluid img-center" src="../../images/tv.png" alt="">
+                    <img class="img-fluid img-center" src="{{post_pack.meta('image_pack')}}" alt="{{post_pack.meta('alt_pack')}}">
                 </div>
             {% endif %}
         </div>

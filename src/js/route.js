@@ -54,7 +54,6 @@ const initBarba = () =>
       }
     },
   });
-
 let scrollContainer = new LocomotiveScroll({
   el: document.querySelector("[data-scroll-container]"),
   smooth: true,
@@ -69,7 +68,38 @@ scrollContainer.on("scroll", (position) => {
   if (position.scroll.y > 0) {
     body.classList.add("on-scroll");
   }
+
+  // console.log("toto");
+  const btnScrollToTop = document.querySelector(".btn-to-top");
+  const scrollTrigger = 900;
+
+  const scrollToTop = position.scroll.y;
+  if (scrollToTop > scrollTrigger) {
+    btnScrollToTop.classList.add("show");
+  } else {
+    btnScrollToTop.classList.remove("show");
+  }
+
+  // btnScrollToTop.addEventListener("click", function () {
+  //   // e.preventDefault();
+  //   console.log("click");
+  //   scrollContainer.scroll({
+  //     top: 0,
+  //   });
+  // });
 });
+
+// const btnScrollToTop = document.querySelector(".btn-to-top");
+
+// scrollContainer.on("call", (value, way) => {
+//   if (value === "toggleBackToTop") {
+//     if (way === "enter") {
+//       btnScrollToTop.classList.add("show");
+//     } else {
+//       btnScrollToTop.classList.remove("show");
+//     }
+//   }
+// });
 
 export const initRouting = () => {
   const $html = document.querySelector("html");
@@ -109,6 +139,15 @@ export const initRouting = () => {
       if (position.scroll.y > 0) {
         body.classList.add("on-scroll");
       }
+      const btnScrollToTop = document.querySelector(".btn-to-top");
+      const scrollTrigger = 900;
+
+      const scrollToTop = position.scroll.y;
+      if (scrollToTop > scrollTrigger) {
+        btnScrollToTop.classList.add("show");
+      } else {
+        btnScrollToTop.classList.remove("show");
+      }
     });
     const navMobile = document.querySelector(".nav-mobile");
     navMobile.classList.remove("is-open");
@@ -127,6 +166,7 @@ export const initRouting = () => {
     barba.hooks.after(() => {
       $html.classList.remove("transition-running");
       scrollContainer.update();
+      const btnScrollToTop = document.querySelector(".btn-to-top");
       const ctaSolution = document.querySelector(".cta-demande-demo");
       if (ctaSolution) {
         ctaDemo();

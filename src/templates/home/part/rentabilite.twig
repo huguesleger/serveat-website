@@ -1,8 +1,8 @@
 <div class="wrap-keyword">
-    <div class="keyword keyword-left pt-5" data-scroll>
+    <div class="keyword keyword-left pt-5">
         <p class="keyword-txt" data-scroll data-scroll-speed="-2" data-scroll-direction="horizontal" data-scroll-target="#profitability">{{ post_profitability.meta('keyword_1_profitability') }}</p>
     </div>
-    <div class="keyword keyword-right pt-3" data-scroll>
+    <div class="keyword keyword-right pt-3">
         <p class="keyword-txt" data-scroll data-scroll-speed="6" data-scroll-direction="horizontal" data-scroll-target="#profitability">{{ post_profitability.meta('keyword_2_profitability') }}</p>
     </div>
 </div>
@@ -10,7 +10,7 @@
     <div class="row">
         <div class="col-12 col-lg-4 order-lg-1 order-2">
             <div class="px-4 d-flex align-items-end h-100">
-                <img class="img-fluid" src="../../../images/illu-rentabilite.svg" alt="Serv'eat augmente votre rentabilité">
+                <img class="img-fluid" src="{{ post_profitability.meta('image_profitability') }}" alt="{{ post_profitability.meta('alt_profitability') }}">
             </div>
         </div>
         <div class="col-12 col-lg-8 order-lg-2 order-1">

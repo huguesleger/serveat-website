@@ -26,7 +26,12 @@
             {% block content %}
             {% endblock %}
         </div>
-
+        <div class="page-transition-backdrop"></div> 
+        <div id="scroll-to-top">
+            <a href="#hero" class="btn-to-top" data-scroll-to>
+                <i class="fas fa-chevron-up"></i>
+            </a>
+        </div>
         {% block footer %}
                 {% block contentFooter %}
                 <footer class="footer" data-scroll-section>
@@ -35,7 +40,6 @@
                 {% endblock %}
             {{ function('wp_footer') }}
         {% endblock %} 
-        <div class="page-transition-backdrop"></div> 
     </div>
 </body>
 </html>

@@ -45,18 +45,11 @@
             <div class="slider-device" data-scroll data-scroll-speed="1">
                 <div class="swiper-container">
                     <div class="swiper-wrapper">
+                    {% for post_card_slider in posts_card_slider %}
                         <div class="swiper-slide">
-                            <img class="img-fluid" src="../../../images/img-slider-1.png" alt="">
+                            <img class="img-fluid" src="{{post_card_slider.meta('image_slider')}}" alt="{{post_card_slider.alt_slider}}">
                         </div>
-                        <div class="swiper-slide">
-                            <img class="img-fluid" src="../../../images/img-slider-2.png" alt="">
-                        </div>
-                        <div class="swiper-slide">
-                            <img class="img-fluid" src="../../../images/img-slider-3.png" alt="">
-                        </div>
-                        <div class="swiper-slide">
-                            <img class="img-fluid" src="../../../images/img-slider-3.png" alt="">
-                        </div>                          
+                    {% endfor %}                        
                     </div>
                 </div>
             </div>
