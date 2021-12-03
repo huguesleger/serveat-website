@@ -235,11 +235,10 @@ new serveat();
 			add_menu_page(
 				'Post Types',    
 				'Home Page',          
-				'edit_posts',           
-				// 'javascript:void(0);',  
+				'edit_posts',            
 				'homepost/custom-post-home.php',
 				'',                   
-				'dashicons-food', 
+				'dashicons-cover-image', 
 				4
 			);
 	} 
@@ -253,20 +252,11 @@ new serveat();
 			'Post Types',    
 			'Solution Page',          
 			'edit_posts',           
-			// 'javascript:void(0);',  
 			'solutionpost/custom-post-solution.php',
 			'',                   
-			'dashicons-food', 
-			4
-		);
-		// add_submenu_page(
-		// 	'javascript:void(0);',
-		// 	// 'solutionpost/custom-post-solution.php',
-		// 	'Liste Serveat',
-		// 	'Liste Serveat',
-		// 	'edit_posts',
-		// 	"edit.php?post_type=list-serveat"
-		// );				
+			'dashicons-lightbulb', 
+			5
+		);			
 } 
 
 
