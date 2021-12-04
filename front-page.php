@@ -74,4 +74,7 @@ $context['post_offer'] = $timber_post_offer;
 $timber_post_client         = new Timber\Post();
 $context['post_client'] = $timber_post_client;
 
+$timber_post_scrolltop            = new Timber\Post();
+$context['post_scrolltop'] = $timber_post_scrolltop;
+
 Timber::render( 'front-page.twig', $context);

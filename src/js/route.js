@@ -69,37 +69,17 @@ scrollContainer.on("scroll", (position) => {
     body.classList.add("on-scroll");
   }
 
-  // console.log("toto");
   const btnScrollToTop = document.querySelector(".btn-to-top");
-  const scrollTrigger = 900;
-
-  const scrollToTop = position.scroll.y;
-  if (scrollToTop > scrollTrigger) {
-    btnScrollToTop.classList.add("show");
-  } else {
-    btnScrollToTop.classList.remove("show");
+  if (btnScrollToTop) {
+    const scrollTrigger = 900;
+    const scrollToTop = position.scroll.y;
+    if (scrollToTop > scrollTrigger) {
+      btnScrollToTop.classList.add("show");
+    } else {
+      btnScrollToTop.classList.remove("show");
+    }
   }
-
-  // btnScrollToTop.addEventListener("click", function () {
-  //   // e.preventDefault();
-  //   console.log("click");
-  //   scrollContainer.scroll({
-  //     top: 0,
-  //   });
-  // });
 });
-
-// const btnScrollToTop = document.querySelector(".btn-to-top");
-
-// scrollContainer.on("call", (value, way) => {
-//   if (value === "toggleBackToTop") {
-//     if (way === "enter") {
-//       btnScrollToTop.classList.add("show");
-//     } else {
-//       btnScrollToTop.classList.remove("show");
-//     }
-//   }
-// });
 
 export const initRouting = () => {
   const $html = document.querySelector("html");
@@ -120,8 +100,6 @@ export const initRouting = () => {
       scriptEl.setAttribute("id", "wpforms-js");
       scriptEl.src = newScript;
       document.querySelector("body").appendChild(scriptEl);
-
-      // barba.prefetch( protocol + "//" + baseURL + '/merci/');
     }
   });
   barba.hooks.before(() => {
@@ -140,13 +118,14 @@ export const initRouting = () => {
         body.classList.add("on-scroll");
       }
       const btnScrollToTop = document.querySelector(".btn-to-top");
-      const scrollTrigger = 900;
-
-      const scrollToTop = position.scroll.y;
-      if (scrollToTop > scrollTrigger) {
-        btnScrollToTop.classList.add("show");
-      } else {
-        btnScrollToTop.classList.remove("show");
+      if (btnScrollToTop) {
+        const scrollTrigger = 900;
+        const scrollToTop = position.scroll.y;
+        if (scrollToTop > scrollTrigger) {
+          btnScrollToTop.classList.add("show");
+        } else {
+          btnScrollToTop.classList.remove("show");
+        }
       }
     });
     const navMobile = document.querySelector(".nav-mobile");

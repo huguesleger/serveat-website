@@ -11,7 +11,6 @@
                     <div class="container-fluid px-0">
                         <a class="navbar-brand" href="{{site.url}}">
                             <img src="{{custom_logo_url}}" alt="Serveat"/>
-                            {# <img src="../images/logo-inline-white.svg" data-dark="{{custom_logo_url}}" alt="Serveat"/> #}
                         </a>
                         <div class="btn-nav">
                             <span class="icon-nav"></span>
@@ -27,11 +26,13 @@
             {% endblock %}
         </div>
         <div class="page-transition-backdrop"></div> 
-        <div id="scroll-to-top">
-            <a href="#hero" class="btn-to-top" data-scroll-to>
-                <i class="fas fa-chevron-up"></i>
-            </a>
-        </div>
+        {% if post_scrolltop.meta('affichage_scrolltop') == true %}
+            <div id="scroll-to-top">
+                <a href="#hero" class="btn-to-top" data-scroll-to>
+                    <i class="fas fa-chevron-up"></i>
+                </a>
+            </div>
+        {% endif %}
         {% block footer %}
                 {% block contentFooter %}
                 <footer class="footer" data-scroll-section>
