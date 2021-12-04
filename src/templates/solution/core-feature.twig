@@ -1,7 +1,7 @@
 <div class="container">
     <div class="solution-list bg-grey-light p-5" data-scroll data-scroll-speed="3">
-        <div class="row">
             {% if post_pack.meta('affichage_block_txt_pack') == true %}
+            <div class="row">
                 <div class="col-lg-5">
                     <h2 class="section-title mb-3">{{post_pack.meta('title_pack')}}</h2>
                     <div class="mb-5 mb-lg-0">
@@ -11,12 +11,14 @@
                 <div class="col-lg-7">
                     <img class="img-fluid" src="{{post_pack.meta('image_pack')}}" alt="{{post_pack.meta('alt_pack')}}">
                 </div>
+            </div>
             {% else %}
-                <div class="col-12">
+            <div class="row justify-content-center">
+                <div class="col-7">
                     <img class="img-fluid img-center" src="{{post_pack.meta('image_pack')}}" alt="{{post_pack.meta('alt_pack')}}">
                 </div>
+            </div>
             {% endif %}
-        </div>
         <div class="row pt-5">
         {% for post_pack_serveat in posts_pack_serveat %}
             <div class="col-lg-4">
