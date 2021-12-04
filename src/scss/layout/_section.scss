@@ -240,3 +240,11 @@
     }
   }
 }
+
+@include maxwidth(sm) {
+  .section {
+    .img-cta {
+      height: auto;
+    }
+  }
+}

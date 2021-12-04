@@ -1,50 +1,50 @@
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const WatchTimePlugin = require('webpack-watch-time-plugin');
-const WebpackAssetsManifest = require('webpack-assets-manifest');
-const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
-const cssnano = require('cssnano');
-const autoprefixer = require('autoprefixer');
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const WatchTimePlugin = require("webpack-watch-time-plugin");
+const WebpackAssetsManifest = require("webpack-assets-manifest");
+const BrowserSyncPlugin = require("browser-sync-webpack-plugin");
+const cssnano = require("cssnano");
+const autoprefixer = require("autoprefixer");
 
 module.exports = (env, argv) => {
   let config = {
     entry: {
-      twig: './src/twig.js',
-      styles: './src/scss.js',
-      app: './src/js/app.js',
+      twig: "./src/twig.js",
+      styles: "./src/scss.js",
+      app: "./src/js/app.js",
       // vendors: './src/js/vendors.js',
     },
     output: {
-      filename: 'js/[name].[chunkhash].js',
-      chunkFilename: '[name].[chunkhash].js',
-      publicPath: '/wp-content/themes/serveat/dist/',
+      filename: "js/[name].[chunkhash].js",
+      chunkFilename: "[name].[chunkhash].js",
+      publicPath: "/wp-content/themes/serveat/dist/",
     },
     resolve: {
-      extensions: ['*', '.js'],
+      extensions: ["*", ".js"],
     },
-    mode: 'development',
+    mode: "development",
     performance: {
       hints: false,
     },
-    devtool: 'source-map',
+    devtool: "source-map",
     module: {
       rules: [
         {
           test: /\.twig$/,
           use: [
             {
-              loader: 'file-loader',
+              loader: "file-loader",
               options: {
-                context: 'src',
-                name: '[path][name].[ext]',
+                context: "src",
+                name: "[path][name].[ext]",
               },
             },
-            { loader: 'extract-loader' },
+            { loader: "extract-loader" },
             {
-              loader: 'html-loader',
+              loader: "html-loader",
               options: {
                 minimize: false,
                 interpolate: true,
-                attrs: ['img:src', 'link:href'],
+                attrs: ["img:src", "link:href"],
               },
             },
           ],
@@ -53,9 +53,9 @@ module.exports = (env, argv) => {
           test: /\.js$/,
           use: [
             {
-              loader: 'babel-loader',
+              loader: "babel-loader",
               options: {
-                presets: ['@babel/env'],
+                presets: ["@babel/env"],
               },
             },
           ],
@@ -64,10 +64,10 @@ module.exports = (env, argv) => {
           test: /\.(png|svg|jpg|jpeg|tiff|webp|gif|ico|mp4|webm|wav|mp3|m4a|aac|oga)$/,
           use: [
             {
-              loader: 'file-loader',
+              loader: "file-loader",
               options: {
-                context: 'src',
-                name: '[path][name].[md5:hash:8].[ext]',
+                context: "src",
+                name: "[path][name].[md5:hash:8].[ext]",
               },
             },
           ],
@@ -75,55 +75,53 @@ module.exports = (env, argv) => {
         {
           test: /\.(ttf|otf|eot|woff|woff2)$/,
           use: {
-              loader: 'file-loader',
-              options: {
-                context: 'src',
-                name: '[path][name].[md5:hash:8].[ext]',
-              },
+            loader: "file-loader",
+            options: {
+              context: "src",
+              name: "[path][name].[md5:hash:8].[ext]",
+            },
           },
-      },
+        },
       ],
     },
     plugins: [
       new MiniCssExtractPlugin({
-        filename: 'css/[name].[chunkhash].css',
-        chunkFilename: '[id].css',
+        filename: "css/[name].[chunkhash].css",
+        chunkFilename: "[id].css",
       }),
       new WatchTimePlugin(),
       new WebpackAssetsManifest(),
       new BrowserSyncPlugin({
-        files:[
-            '**/*.php', '**/*.twig'
-        ],
-        host: 'localhost',
+        files: ["**/*.php", "**/*.twig"],
+        host: "localhost",
         port: 3000,
-        proxy: 'http://serveat-website.local/',
-        reloadDelay: 0
-    })
+        proxy: "http://serveat-website.local/",
+        reloadDelay: 0,
+      }),
     ],
   };
 
-  if (argv.mode !== 'production') {
+  if (argv.mode !== "production") {
     config.module.rules.push({
       test: /\.s?css$/,
       use: [
         MiniCssExtractPlugin.loader,
         {
-          loader: 'css-loader',
+          loader: "css-loader",
           options: {
             sourceMap: true,
           },
         },
         {
-          loader: 'postcss-loader',
+          loader: "postcss-loader",
           options: {
-            ident: 'postcss',
+            ident: "postcss",
             plugins: [autoprefixer({})],
             sourceMap: true,
           },
         },
         {
-          loader: 'sass-loader',
+          loader: "sass-loader",
           options: {
             sourceMap: true,
             precision: 10,
@@ -133,34 +131,34 @@ module.exports = (env, argv) => {
     });
   }
 
-  if (argv.mode === 'production') {
+  if (argv.mode === "production") {
     config.module.rules.push({
       test: /\.s?css$/,
       use: [
         MiniCssExtractPlugin.loader,
         {
-          loader: 'css-loader',
+          loader: "css-loader",
           options: {
-            sourceMap: true,
+            sourceMap: false,
           },
         },
         {
-          loader: 'postcss-loader',
+          loader: "postcss-loader",
           options: {
-            ident: 'postcss',
+            ident: "postcss",
             plugins: [
               cssnano({
-                preset: 'default',
+                preset: "default",
               }),
               autoprefixer({}),
             ],
-            sourceMap: true,
+            sourceMap: false,
           },
         },
         {
-          loader: 'sass-loader',
+          loader: "sass-loader",
           options: {
-            sourceMap: true,
+            sourceMap: false,
             precision: 10,
           },
         },
@@ -169,10 +167,10 @@ module.exports = (env, argv) => {
 
     config.module.rules.push({
       test: /\.svg$/,
-      enforce: 'pre',
+      enforce: "pre",
       use: [
         {
-          loader: 'svgo-loader',
+          loader: "svgo-loader",
           options: {
             precision: 2,
             plugins: [
